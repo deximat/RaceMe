@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9aaa167c-1bc4-497b-8710-9231c7105c3c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/src/main/java/com/codlex/racememonolith/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/race-me-monolith/src/main/java/com/codlex/racememonolith/login/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/src/main/java/com/codlex/racememonolith/race/Race.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/race-me-monolith/src/main/java/com/codlex/racememonolith/race/Race.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/src/main/java/com/codlex/racememonolith/race/RaceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/race-me-monolith/src/main/java/com/codlex/racememonolith/race/RaceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/DistanceTrackerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DistanceTrackerComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MainScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MainScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MainServer.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MainServer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Race.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Race.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -75,12 +70,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="4022" />
+          <entry key="js" value="4830" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="4022" />
+          <entry key="JavaScript" value="4830" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -107,8 +102,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/components/Race.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="159" column="35" lean-forward="true" selection-start-line="159" selection-start-column="35" selection-end-line="159" selection-end-column="35" />
+            <state relative-caret-position="102">
+              <caret line="282" column="16" selection-start-line="282" selection-start-column="16" selection-end-line="282" selection-end-column="16" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -145,9 +140,11 @@
       <find>racecomponent</find>
       <find>getme()</find>
       <find>slowerthanme</find>
+      <find>.name</find>
     </findStrings>
     <replaceStrings>
       <replace>runners</replace>
+      <replace>.username</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -249,12 +246,12 @@
       <updated>1535484178604</updated>
       <workItem from="1535484182109" duration="12421000" />
       <workItem from="1535568136450" duration="19481000" />
-      <workItem from="1535884815556" duration="10178000" />
+      <workItem from="1535884815556" duration="13001000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42080000" />
+    <option name="totallyTimeSpent" value="44903000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1414" height="812" extended-state="0" />
@@ -381,8 +378,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/components/Race.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="159" column="35" lean-forward="true" selection-start-line="159" selection-start-column="35" selection-end-line="159" selection-end-column="35" />
+        <state relative-caret-position="102">
+          <caret line="282" column="16" selection-start-line="282" selection-start-column="16" selection-end-line="282" selection-end-column="16" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>

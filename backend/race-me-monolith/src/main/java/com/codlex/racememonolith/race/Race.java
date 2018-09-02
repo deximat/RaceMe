@@ -11,6 +11,7 @@ import com.codlex.racememonolith.race.RaceState.RaceStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
+import lombok.extern.slf4j.Slf4j;
 
 public class Race {
 
@@ -20,16 +21,22 @@ public class Race {
 
 	@AllArgsConstructor
 	@Data
+	@Slf4j
 	public static class Runner {
-		@Getter
+
 		private final int id;
 		private final String username;
-
-		@Getter
 		private volatile double distance;
+		private boolean isFinished;
 
 		public synchronized void addDistance(double distance) {
 			this.distance += distance;
+			double targetDistance = 5;
+			this.isFinished = this.distance >= targetDistance;
+
+			if (this.isFinished) {
+				log.debug("FINIIIISHED!" + username);
+			}
 		}
 
 		public Runner(int id) {
@@ -42,6 +49,7 @@ public class Race {
 
 	@Getter
 	final int id;
+
 	final Map<Integer, Runner> runners;
 
 	public Race(final List<Integer> userIds) {

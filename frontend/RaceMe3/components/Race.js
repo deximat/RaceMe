@@ -1,7 +1,8 @@
 import {Component} from "react";
-import {Text, View} from "react-native";
+import {Text, View, StyleSheet, FlatList} from "react-native";
 import React from "react";
 import DistanceTrackerComponent from "./DistanceTrackerComponent";
+import { List, ListItem} from 'react-native-elements'
 
 
 const MAX_BAR_SIZE = 400;
@@ -106,7 +107,9 @@ class RaceComponent extends Component {
     }
 
     getMe() {
-        return this.state.runners.find((value) => value.id == this.props.userId);
+        let me = this.state.runners.find((value) => value.id == this.props.userId);
+        console.log("THIS IS ME: " + JSON.stringify(me));
+        return me;
     }
 
 
@@ -117,6 +120,12 @@ class RaceComponent extends Component {
 
         let percent = who.distance / MAX_DISTANCE
         return Math.max(percent * MAX_BAR_SIZE, 30);
+    }
+
+    results() {
+        return (<View style = {{ width: 200, height: 200, backgroundColor: "red", position : "absolute", top:0, left : 0, zIndex: 2}}>
+            <Text>RESULTS! {console.log("RENDERED!!!!!!!!!!!!!!!!!!!!!")}</Text>
+        </View>);
     }
 
     render() {
@@ -271,13 +280,51 @@ class RaceComponent extends Component {
                 </View>
 
                 <DistanceTrackerComponent onDistanceChange={(distance) => this.race.sendDistance(distance)} />
+                
+                {/*put this in this.results when finished() */}
+                <View style = {{  height: 450, backgroundColor: "white", position : "absolute", left : 0, right: 0, top : 300, zIndex: 2}}>
+                    <Text style = {{ fontSize : 20}}>Congradulations! {this.calculatePositionStringified(this.getMe())} position!</Text>
+                    <List>
+                        <FlatList
+                            data={this.state.runners}
+                            renderItem={this.renderRow}
+                            keyExtractor={item => item.username}
+                        />
+                    </List>
+                </View>
 
+                {this.getMe().finished ? this.results() : null}
             </View>
 
         );
     }
 
+    renderRow ({ item, sectionID, rowID, higlightRow }) {
+        return (
+            <ListItem
+                title={item.username}
+                subtitle={item.finished ? "Finished" : "Running..."}
+            />
+        )
+    }
+
 
 }
+
+let styles = StyleSheet.create({
+    subtitleView: {
+        flexDirection: 'row',
+        paddingLeft: 10,
+        paddingTop: 5
+    },
+    ratingImage: {
+        height: 19.21,
+        width: 100
+    },
+    ratingText: {
+        paddingLeft: 10,
+        color: 'grey'
+    }
+});
 
 export default RaceComponent;

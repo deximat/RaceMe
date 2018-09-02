@@ -57,7 +57,8 @@ public class RaceManager {
 
 	private Race findRaceByUserId(int userId) {
 		for (Race race : this.races.values()) {
-			if (race.findRunner(userId) != null) {
+			Runner runner = race.findRunner(userId);
+			if (runner != null && !runner.isFinished()) {
 				return race;
 			}
 		}
