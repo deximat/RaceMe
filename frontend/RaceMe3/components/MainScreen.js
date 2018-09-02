@@ -15,6 +15,7 @@ class MainScreenComponent extends Component {
         super(props);
 
         this.state = {
+            userData : props.userData,
             appState: IDLE_STATE,
             oldState: {
                 latitude: 0,
@@ -60,8 +61,39 @@ class MainScreenComponent extends Component {
                         fontSize: 60,
                         paddingTop: 50,
                         textAlign: "center"
+
                     }}
                 >RaceMe 3.0</Text>
+
+                <Text
+                    style={{
+                        position: "absolute",
+                        left: 0,
+                        top: 180,
+                        backgroundColor: "#3B5998",
+                        color: "white",
+                        width: "100%",
+                        height: 50,
+                        fontSize: 20,
+                        textAlign: "center",
+                        padding : 10
+                    }}
+                >Welcome back {this.state.userData.username}!</Text>
+                <Text
+                    style={{
+                        position: "absolute",
+                        left: 0,
+                        top: 240,
+                        backgroundColor: "#3B5998",
+                        color: "white",
+                        width: "100%",
+                        height: 30,
+                        fontSize: 15,
+                        textAlign: "center",
+                        padding : 5
+                    }}
+                > Rating: {this.state.userData.rating}</Text>
+
                 {
                     this.state.appState == IDLE_STATE ?
                         this.idleState() : null

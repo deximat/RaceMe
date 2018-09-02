@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Text, View} from 'react-native';
 import MapView from 'react-native-maps';
+import LoginComponent from './components/Login';
 
 import geolib from 'geolib'
 
@@ -13,24 +14,15 @@ class GeolocationExample extends Component {
 
     constructor(props) {
         super(props);
+        this.state = {};
     }
 
     render() {
         return (
             <View style = {{ flexGrow : 1, flex : 1}}>
-
-                // TODO: investigate why get location doesn't work without mapview
-
-                <MapView
-                    style={{
-                        width: 0,
-                        height: 0
-                    }}
-                    showsUserLocation={true}
-                    followsUserLocation={true}
-                >
-                </MapView>
-                <RaceComponent/>
+                {this.state.userData == null ?
+                <LoginComponent onSuccess={(data) => this.setState({userData : data})} />
+                : <MainScreenComponent userData={this.state.userData}/>}
             </View>
         )
     };
