@@ -3,9 +3,7 @@ import {Text, View} from "react-native";
 import React from "react";
 import DistanceTrackerComponent from "./DistanceTrackerComponent";
 
-var idGenerator = 0;
 
-const runners_COUNT = 6;
 const MAX_BAR_SIZE = 400;
 const MAX_DISTANCE = 5;
 
@@ -35,6 +33,7 @@ class MultiplayerRace {
 
     sendDistance(distance) {
         this.sendMessage("/race/" + this.raceId + "/user/" + this.userId + "/distance/" + distance, {},  (data) => {
+            data.runners = data.runners.sort((a, b) => b.distance - a.distance);
             this.callback(data);
         });
     }
@@ -47,42 +46,13 @@ class MultiplayerRace {
 
 class RaceComponent extends Component {
 
-    generateUserId() {
-        return idGenerator++;
-    }
-
-
-    generateName(id) {
-        var names = ["Dejan", "Marko", "Pera", "Aca", "Mika", "ProRunner"];
-        return names[id];
-    }
-
-    generaterunners(runnersCount) {
-        let runners = [];
-
-        for (var i = 0; i < runnersCount; i++) {
-            let generatedId = this.generateUserId();
-            runners.push({
-                id : generatedId,
-                distance : 0,
-                name : this.generateName(generatedId)
-            });
-        }
-
-        return runners;
-    }
-
     constructor(props) {
         super(props);
-        this.race = new MultiplayerRace(0, 1, "localhost", 8080);
-        this.race.sendDistance(0);
-        this.race.subscribeToRaceUpdates((state) => this.setState(state));
+        console.log("initial state: " + JSON.stringify(this.props.initialState));
+        this.state = this.props.initialState;
 
-        this.state = {
-            id : 0,
-            runners : [ { id : 0, distance : 0}]
-        };
-        this.state.myUserId = 0;
+        this.race = new MultiplayerRace(this.props.userId, this.props.initialState.id, "192.168.100.161", 8080);
+        this.race.subscribeToRaceUpdates((state) => this.setState(state));
 
         // this.state = {
         //     runners : props.runners}
@@ -90,36 +60,6 @@ class RaceComponent extends Component {
         //     this.onRaceUpdate();
         // }, 1000);
     }
-
-    fakeUpdaterunners(runners) {
-        let newrunners = [];
-        let SPEED = 0.2; // this is just for testing purposes, 5k should last around 3 min
-        for (let i = 0; i < runners.length; i++) {
-            let player = runners[i];
-            newrunners.push({
-                id : player.id,
-                name : player.name,
-                distance : Math.min(MAX_DISTANCE, player.distance + Math.random() * SPEED)
-            })
-        }
-
-        newrunners.sort((a, b) => b.distance - a.distance);
-
-        return newrunners;
-    }
-
-    onRaceUpdate() {
-        // generate new state
-
-        let newState = {
-            id : this.state.myUserId,
-            runners : this.fakeUpdaterunners(this.state.runners)
-        };
-
-        // apply state
-        this.setState(newState);
-    }
-
 
     calculatePosition(id) {
         return this.state.runners.findIndex((value) => value.id == id) + 1;
@@ -144,9 +84,9 @@ class RaceComponent extends Component {
     }
 
     getSlowerThanMe() {
-        let myPosition = this.calculatePosition(this.state.myUserId);
+        let myPosition = this.calculatePosition(this.props.userId);
 
-        if (myPosition >= runners_COUNT) {
+        if (myPosition >= this.state.runners.length) {
             return null;
         }
 
@@ -155,7 +95,7 @@ class RaceComponent extends Component {
     }
 
     getFasterThanMe() {
-        let myPosition = this.calculatePosition(this.state.myUserId);
+        let myPosition = this.calculatePosition(this.props.userId);
 
         if (myPosition <= 1) {
             return null;
@@ -166,7 +106,7 @@ class RaceComponent extends Component {
     }
 
     getMe() {
-        return this.state.runners.find((value) => value.id == this.state.myUserId);
+        return this.state.runners.find((value) => value.id == this.props.userId);
     }
 
 
@@ -221,7 +161,7 @@ class RaceComponent extends Component {
                         fontSize: 20,
                         textAlign: "center"
                     }}
-                >{this.getMe().name}</Text>
+                >{this.getMe().username}</Text>
 
                 <View style={{backgroundColor : "red", position : "absolute", alignItems : "stretch", left: 0, right: 0, top: 200, bottom: 0}}>
                     <View style = {{ flex: 1, backgroundColor : "purple" }}></View>
@@ -239,7 +179,7 @@ class RaceComponent extends Component {
                                     fontSize : 20,
                                     color : "white"
                                 }}
-                            >{this.getSlowerThanMe() != null ? this.getSlowerThanMe().name : "" }</Text>
+                            >{this.getSlowerThanMe() != null ? this.getSlowerThanMe().username : "" }</Text>
                             <Text
                                 style = {{
                                     backgroundColor : "#FD6A02",
@@ -272,7 +212,7 @@ class RaceComponent extends Component {
                                 fontSize : 20,
                                 color : "white"
                             }}
-                        >{this.getMe().name}</Text>
+                        >{this.getMe().username}</Text>
                         <Text
                             style = {{
                                 backgroundColor : "#3B5998",
@@ -306,7 +246,7 @@ class RaceComponent extends Component {
                                     fontSize : 20,
                                     color : "white"
                                 }}
-                            >{this.getFasterThanMe() != null ? this.getFasterThanMe().name : "" }</Text>
+                            >{this.getFasterThanMe() != null ? this.getFasterThanMe().username : "" }</Text>
                             <Text
                                 style = {{
                                     backgroundColor : "green",
@@ -326,7 +266,7 @@ class RaceComponent extends Component {
                                     fontSize : 15,
                                     color : "white"
                                 }}
-                            >{this.getMe().distance.toFixed(2) + "km"}</Text>
+                            >{this.getFasterThanMe().distance.toFixed(2) + "km"}</Text>
                         </View>) : null}
                 </View>
 

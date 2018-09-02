@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Text, View} from 'react-native';
 import geolib from "geolib";
-
+import MapView from 'react-native-maps';
 class DistanceTrackerComponent extends Component {
 
     constructor(props) {
@@ -56,7 +56,8 @@ class DistanceTrackerComponent extends Component {
     }
 
     render() {
-        return (<View></View>);
+        return (<MapView showsUserLocation={true}
+                         followsUserLocation={true}></MapView>);
         // return (
         //         //   <View style = {{
         //         //       flex : 1,
