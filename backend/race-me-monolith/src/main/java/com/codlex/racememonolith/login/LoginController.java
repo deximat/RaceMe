@@ -17,7 +17,7 @@ public class LoginController {
 
 		// create new if one doesn't exist
 		if (user == null) {
-			UserManager.get().registerUser(username);
+			user = UserManager.get().registerUser(username);
 		}
 
 		return user;

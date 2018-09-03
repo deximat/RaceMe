@@ -64,6 +64,8 @@ class LoginComponent extends Component {
                 }}
                 onPress={() => this.login()}
             />
+
+
         </KeyboardAvoidingView>);
     }
 

@@ -2,7 +2,8 @@ import {Component} from "react";
 import {Text, View, StyleSheet, FlatList} from "react-native";
 import React from "react";
 import DistanceTrackerComponent from "./DistanceTrackerComponent";
-import { List, ListItem} from 'react-native-elements'
+import {Button, List, ListItem} from 'react-native-elements'
+import Styles from "./Styles";
 
 
 const MAX_BAR_SIZE = 400;
@@ -280,10 +281,10 @@ class RaceComponent extends Component {
                 </View>
 
                 <DistanceTrackerComponent onDistanceChange={(distance) => this.race.sendDistance(distance)} />
-                
-                {/*put this in this.results when finished() */}
-                <View style = {{  height: 450, backgroundColor: "white", position : "absolute", left : 0, right: 0, top : 300, zIndex: 2}}>
-                    <Text style = {{ fontSize : 20}}>Congradulations! {this.calculatePositionStringified(this.getMe())} position!</Text>
+
+
+                <View style = {{  borderWidth: 5, padding: 10, margin: 20,  borderColor : Styles.mainColor,  backgroundColor: "white", position : "absolute", left : 0, right: 0, top : 250, zIndex: 2}}>
+                    <Text style = {{ fontSize : 30, textAlign: "center"}}>Finished race!</Text>
                     <List>
                         <FlatList
                             data={this.state.runners}
@@ -291,6 +292,7 @@ class RaceComponent extends Component {
                             keyExtractor={item => item.username}
                         />
                     </List>
+                    <Button title="Done" backgroundColor={Styles.mainColor} onPress={() => this.props.battleFinished()} style = {{ marginTop : 50}}></Button>
                 </View>
 
                 {this.getMe().finished ? this.results() : null}
@@ -299,10 +301,10 @@ class RaceComponent extends Component {
         );
     }
 
-    renderRow ({ item, sectionID, rowID, higlightRow }) {
+    renderRow ({ item, index }) {
         return (
             <ListItem
-                title={item.username}
+                title={(index + 1) + "." + item.username}
                 subtitle={item.finished ? "Finished" : "Running..."}
             />
         )

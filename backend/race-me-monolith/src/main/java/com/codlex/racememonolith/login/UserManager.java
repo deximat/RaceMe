@@ -4,7 +4,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 import lombok.Data;
+import lombok.ToString;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
+@ToString
 public class UserManager {
 
 	private static final UserManager INSTANCE = new UserManager();
@@ -42,7 +46,10 @@ public class UserManager {
 		return this.users.get(username);
 	}
 
-	public synchronized void registerUser(String username) {
-		this.users.put(username, new User(username));
+	public synchronized User registerUser(String username) {
+		final User user = new User(username);
+		this.users.put(username, user);
+		log.debug("Registered {}.", user);
+		return user;
 	}
 }

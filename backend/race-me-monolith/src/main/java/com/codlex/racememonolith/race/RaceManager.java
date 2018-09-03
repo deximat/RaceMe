@@ -34,6 +34,18 @@ public class RaceManager {
 
 	private Set<Integer> waitingUsers = new HashSet<>();
 
+
+	@RequestMapping(value = "/race/cancel/user/{userId}")
+	public synchronized boolean cancel(@PathVariable Integer userId) {
+		boolean result = this.waitingUsers.remove(userId);
+		if (result) {
+			log.debug("{} successfully canceled finding race.", userId);
+		} else {
+			log.error("{} tried to cancel race but wasn't in queue.", userId);
+		}
+		return result;
+	}
+
 	@RequestMapping(value = "/race/find/user/{userId}")
 	public synchronized RaceState findRace(@PathVariable("userId") int userId) {
 
@@ -52,16 +64,17 @@ public class RaceManager {
 		} else {
 			return RaceState.WAITING;
 		}
-
 	}
 
 	private Race findRaceByUserId(int userId) {
+
 		for (Race race : this.races.values()) {
 			Runner runner = race.findRunner(userId);
 			if (runner != null && !runner.isFinished()) {
 				return race;
 			}
 		}
+
 		return null;
 	}
 

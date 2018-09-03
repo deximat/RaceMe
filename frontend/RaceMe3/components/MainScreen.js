@@ -20,14 +20,8 @@ class MainScreenComponent extends Component {
             currentRace : null,
             userData : props.userData,
             appState: IDLE_STATE,
-            oldState: {
-                latitude: 0,
-                longitude: 0,
-                latitudeDelta: 0,
-                longitudeDelta: 0,
-                coordinates: []
-            }
         };
+
     }
 
     mainScreen() {
@@ -45,11 +39,6 @@ class MainScreenComponent extends Component {
                         showsUserLocation={true}
                         followsUserLocation={true}
                     >
-                        <Polyline
-                            coordinates={this.state.oldState.coordinates}
-                            strokeColor="#000"
-                            strokeWidth={6}
-                        />
                     </MapView>
 
                     <Text style={{
@@ -145,12 +134,17 @@ class MainScreenComponent extends Component {
             <View style={{flexGrow: 1, flex : 1 }}>
                 {this.state.currentRace == null ?
                     this.mainScreen()
-                    : <RaceComponent  userId = {this.state.userData.id} initialState = {this.state.currentRace} />
+                    : <RaceComponent  userId = {this.state.userData.id} initialState = {this.state.currentRace} battleFinished = {
+                        () => {
+                            this.setState({currentRace : null, appState : IDLE_STATE});
+                        }
+                    } />
                 }
             </View>
         );
 
     }
+
 
     idleState() {
         return (
@@ -171,7 +165,7 @@ class MainScreenComponent extends Component {
                     title="Find 5k RACE"
                     onPress={() => {
                         this.setState({appState: LOOKING_FOR_OPPONENT_STATE});
-                        let interval = setInterval(() => {
+                        this.interval = setInterval(() => {
                             MainServer.fetch("/race/find/user/" + this.state.userData.id, {}, (response) => {
                                 if (response.status == "Waiting") {
                                     return;
@@ -180,9 +174,10 @@ class MainScreenComponent extends Component {
                                 if (response.status == "Running") {
                                     console.log("Starting battle.");
                                     this.setState({currentRace : response});
-                                    clearInterval(interval);
+                                    clearInterval(this.interval);
                                     return;
                                 }
+
                                 console.log(JSON.stringify(response));
                             });
                         }, 1000);
@@ -201,6 +196,7 @@ class MainScreenComponent extends Component {
                 height: 200,
 
             }}>
+
                 <Text style={{
 
                     backgroundColor: "#3B5998",
@@ -213,18 +209,21 @@ class MainScreenComponent extends Component {
                 >Looking for a worthy runner...</Text>
 
                 <ActivityIndicator size="large" color="white" style={{zIndex: 2, top: -120}}/>
+                <Button title="Cancel"  onPress={ () => this.cancelFind()}/>
+
             </View>
         );
     }
 
-
-    calculateDistance() {
-        if (this.state.coordinates.length >= 2) {
-            return geolib.getDistance(this.state.coordinates[0], this.state.coordinates[1]);
-        } else {
-            return 0;
-        }
+    cancelFind() {
+        MainServer.fetch("/race/cancel/user/" + this.state.userData.id, {}, (response) => {
+            if (response) {
+                this.setState({ appState : IDLE_STATE });
+                clearInterval(this.interval);
+            }
+        });
     }
+
 }
 
 export default MainScreenComponent;
