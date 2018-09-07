@@ -2,7 +2,7 @@ package com.codlex.racememonolith.race;
 
 import java.util.*;
 
-import com.codlex.racememonolith.race.Race.Runner;
+import com.codlex.racememonolith.race.runner.Runner;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @Slf4j
 public class RaceManager {
-	private static final int NUMBER_OF_PARTICIPANTS = 2;
+
+	private static final int NUMBER_OF_PARTICIPANTS = 1;
 
 	private Map<Integer, Race> races = new HashMap<>();
 

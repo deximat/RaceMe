@@ -4,6 +4,7 @@ import React from "react";
 import DistanceTrackerComponent from "./DistanceTrackerComponent";
 import {Button, List, ListItem} from 'react-native-elements'
 import Styles from "./Styles";
+import MainServer from "./MainServer";
 
 
 const MAX_BAR_SIZE = 400;
@@ -53,8 +54,11 @@ class RaceComponent extends Component {
         console.log("initial state: " + JSON.stringify(this.props.initialState));
         this.state = this.props.initialState;
 
-        this.race = new MultiplayerRace(this.props.userId, this.props.initialState.id, "192.168.100.161", 8080);
+        this.race = new MultiplayerRace(this.props.userId, this.props.initialState.id, MainServer.address, 8080);
         this.race.subscribeToRaceUpdates((state) => this.setState(state));
+
+
+        this.renderRow = this.renderRow.bind(this);
 
         // this.state = {
         //     runners : props.runners}
@@ -124,8 +128,16 @@ class RaceComponent extends Component {
     }
 
     results() {
-        return (<View style = {{ width: 200, height: 200, backgroundColor: "red", position : "absolute", top:0, left : 0, zIndex: 2}}>
-            <Text>RESULTS! {console.log("RENDERED!!!!!!!!!!!!!!!!!!!!!")}</Text>
+        return (<View style = {{  borderWidth: 5, padding: 10, margin: 20,  borderColor : Styles.mainColor,  backgroundColor: "white", position : "absolute", left : 0, right: 0, top : 250, zIndex: 2}}>
+            <Text style = {{ fontSize : 30, textAlign: "center"}}>Finished race!</Text>
+            <List>
+                <FlatList
+                    data={this.state.runners}
+                    renderItem={this.renderRow}
+                    keyExtractor={item => item.username}
+                />
+            </List>
+            <Button title="Done" backgroundColor={Styles.mainColor} onPress={() => this.props.battleFinished()} style = {{ marginTop : 50}}></Button>
         </View>);
     }
 
@@ -171,13 +183,26 @@ class RaceComponent extends Component {
                         fontSize: 20,
                         textAlign: "center"
                     }}
+                >Time: {this.getStringifiedTime(this.getMe())}</Text>
+                <Text
+                    style={{
+                        position: "absolute",
+                        left: 0,
+                        top: 200,
+                        backgroundColor: "#3B5998",
+                        color: "white",
+                        width: "100%",
+                        height: 50,
+                        fontSize: 20,
+                        textAlign: "center"
+                    }}
                 >{this.getMe().username}</Text>
 
                 <View style={{backgroundColor : "red", position : "absolute", alignItems : "stretch", left: 0, right: 0, top: 200, bottom: 0}}>
                     <View style = {{ flex: 1, backgroundColor : "purple" }}></View>
                 </View>
 
-                <View style={{flex: 1, flexDirection: 'row', position: "absolute", top: 210, bottom: 0, left : 0, right: 0}}>
+                <View style={{flex: 1, flexDirection: 'row', position: "absolute", top: 250, bottom: 0, left : 0, right: 0}}>
                     {this.getSlowerThanMe() != null ?
                         <View style={{flex : 1, height: 500, backgroundColor: 'white', position : "relative", alignItems: 'center', justifyContent: 'flex-end'}} >
                             <Text
@@ -283,29 +308,37 @@ class RaceComponent extends Component {
                 <DistanceTrackerComponent onDistanceChange={(distance) => this.race.sendDistance(distance)} />
 
 
-                <View style = {{  borderWidth: 5, padding: 10, margin: 20,  borderColor : Styles.mainColor,  backgroundColor: "white", position : "absolute", left : 0, right: 0, top : 250, zIndex: 2}}>
-                    <Text style = {{ fontSize : 30, textAlign: "center"}}>Finished race!</Text>
-                    <List>
-                        <FlatList
-                            data={this.state.runners}
-                            renderItem={this.renderRow}
-                            keyExtractor={item => item.username}
-                        />
-                    </List>
-                    <Button title="Done" backgroundColor={Styles.mainColor} onPress={() => this.props.battleFinished()} style = {{ marginTop : 50}}></Button>
-                </View>
-
                 {this.getMe().finished ? this.results() : null}
             </View>
 
         );
     }
 
+    getFullTimeInSeconds(person) {
+        return Math.floor((person.finishedAt - this.state.startedAt) / 1000);
+    }
+
+    getTimeSeconds(person) {
+        return this.getFullTimeInSeconds(person) % 60;
+    }
+
+    getTimeMinutes(person) {
+        return Math.floor(this.getFullTimeInSeconds(person) / 60);
+    }
+
+    twoDigitFormat(n){
+        return n > 9 ? "" + n: "0" + n;
+    }
+
+    getStringifiedTime(person) {
+        return this.twoDigitFormat(this.getTimeMinutes(person)) +  ":" + this.twoDigitFormat(this.getTimeSeconds(person));
+    }
+
     renderRow ({ item, index }) {
         return (
             <ListItem
-                title={(index + 1) + "." + item.username}
-                subtitle={item.finished ? "Finished" : "Running..."}
+                title={(index + 1) + "." + item.username + " " + item.distance.toFixed(2) + "km"}
+                subtitle={(item.finished ? "Finish time: " : "Still running time:") + " " + this.getStringifiedTime(item)}
             />
         )
     }

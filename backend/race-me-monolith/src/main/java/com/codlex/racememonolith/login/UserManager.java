@@ -52,4 +52,5 @@ public class UserManager {
 		log.debug("Registered {}.", user);
 		return user;
 	}
+
 }

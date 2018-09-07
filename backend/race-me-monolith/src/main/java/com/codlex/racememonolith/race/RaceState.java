@@ -2,7 +2,7 @@ package com.codlex.racememonolith.race;
 
 import java.util.List;
 
-import com.codlex.racememonolith.race.Race.Runner;
+import com.codlex.racememonolith.race.runner.Runner;
 import lombok.Data;
 
 @Data
@@ -14,7 +14,8 @@ public class RaceState {
 
 	final int id;
 	final List<Runner> runners;
+	final long startedAt;
 	final RaceStatus status;
 
-	public static final RaceState WAITING = new RaceState(-1, null, RaceStatus.Waiting);
+	public static final RaceState WAITING = new RaceState(-1, null, 0, RaceStatus.Waiting);
 }
