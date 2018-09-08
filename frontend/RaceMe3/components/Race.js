@@ -59,12 +59,6 @@ class RaceComponent extends Component {
 
 
         this.renderRow = this.renderRow.bind(this);
-
-        // this.state = {
-        //     runners : props.runners}
-        // setInterval(() => {
-        //     this.onRaceUpdate();
-        // }, 1000);
     }
 
     calculatePosition(id) {
@@ -137,7 +131,7 @@ class RaceComponent extends Component {
                     keyExtractor={item => item.username}
                 />
             </List>
-            <Button title="Done" backgroundColor={Styles.mainColor} onPress={() => this.props.battleFinished()} style = {{ marginTop : 50}}></Button>
+            <Button title="Done" backgroundColor={Styles.mainColor} onPress={() => this.props.battleFinished()} style = {{ marginTop : 50}} />
         </View>);
     }
 

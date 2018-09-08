@@ -17,8 +17,8 @@ class MainScreenComponent extends Component {
         super(props);
 
         this.state = {
-            currentRace : null,
-            userData : props.userData,
+            currentRace: null,
+            userData: props.userData,
             appState: IDLE_STATE,
         };
 
@@ -26,22 +26,22 @@ class MainScreenComponent extends Component {
 
     mainScreen() {
         return (
-            <View style={{flexGrow: 1, alignItems: 'center', justifyContent: 'center' }}>
-                    <MapView
-                        ref={(el) => (this.map = el)}
-                        style={{
-                            position: "absolute",
-                            left: 0,
-                            right: 0,
-                            top: 0,
-                            bottom: 0
-                        }}
-                        showsUserLocation={true}
-                        followsUserLocation={true}
-                    >
-                    </MapView>
+            <View style={{flexGrow: 1, alignItems: 'center', justifyContent: 'center'}}>
+                <MapView
+                    ref={(el) => (this.map = el)}
+                    style={{
+                        position: "absolute",
+                        left: 0,
+                        right: 0,
+                        top: 0,
+                        bottom: 0
+                    }}
+                    showsUserLocation={true}
+                    followsUserLocation={true}
+                >
+                </MapView>
 
-                    <Text style={{
+                <Text style={{
                     position: "absolute",
                     left: 0,
                     top: 0,
@@ -52,93 +52,95 @@ class MainScreenComponent extends Component {
                     fontSize: 60,
                     paddingTop: 50,
                     textAlign: "center"
+                }}
+                >RaceMe 3.0</Text>
 
-                }}
-                    >RaceMe 3.0</Text>
+                <Text
+                    style={{
+                        position: "absolute",
+                        left: 0,
+                        top: 180,
+                        backgroundColor: "#3B5998",
+                        color: "white",
+                        width: "100%",
+                        height: 50,
+                        fontSize: 20,
+                        textAlign: "center",
+                        padding: 10
+                    }}
+                >Welcome back {this.state.userData.username}!</Text>
 
-                    <Text
+                <Text
                     style={{
-                    position: "absolute",
-                    left: 0,
-                    top: 180,
-                    backgroundColor: "#3B5998",
-                    color: "white",
-                    width: "100%",
-                    height: 50,
-                    fontSize: 20,
-                    textAlign: "center",
-                    padding : 10
-                }}
-                    >Welcome back {this.state.userData.username}!</Text>
-                    <Text
-                    style={{
-                    position: "absolute",
-                    left: 0,
-                    top: 240,
-                    backgroundColor: "#3B5998",
-                    color: "white",
-                    width: "100%",
-                    height: 30,
-                    fontSize: 15,
-                    textAlign: "center",
-                    padding : 5
-                }}
-                    > Rating: {this.state.userData.rating}</Text>
+                        position: "absolute",
+                        left: 0,
+                        top: 240,
+                        backgroundColor: "#3B5998",
+                        color: "white",
+                        width: "100%",
+                        height: 30,
+                        fontSize: 15,
+                        textAlign: "center",
+                        padding: 5
+                    }}
+                > Rating: {this.state.userData.rating}</Text>
 
                 {
                     this.state.appState == IDLE_STATE ?
-                    this.idleState() : null
+                        this.idleState() : null
                 }
 
                 {
                     this.state.appState == LOOKING_FOR_OPPONENT_STATE ?
-                    this.lookingForOpponentState() : null
+                        this.lookingForOpponentState() : null
                 }
 
-                    <Text
+                <Text
                     style={{
-                    position: "absolute",
-                    left: 0,
-                    bottom: 0,
-                    backgroundColor: "#3B5998",
-                    color: "white",
-                    width: "100%",
-                    height: 80,
-                    fontSize: 10,
-                    paddingBottom: 50,
-                    paddingTop: 10,
-                    textAlign: "center"
-                }}
-                    >the running app you have been waiting for</Text>
-                    <Text
+                        position: "absolute",
+                        left: 0,
+                        bottom: 0,
+                        backgroundColor: "#3B5998",
+                        color: "white",
+                        width: "100%",
+                        height: 80,
+                        fontSize: 10,
+                        paddingBottom: 50,
+                        paddingTop: 10,
+                        textAlign: "center"
+                    }}
+                >the running app you have been waiting for</Text>
+                <Text
                     style={{
-                    position: "absolute",
-                    left: 0,
-                    bottom: 0,
-                    backgroundColor: "#3B5998",
-                    color: "white",
-                    width: "100%",
-                    height: 50,
-                    fontSize: 10,
-                    paddingTop: 10,
-                    textAlign: "center"
-                }}
-                    >Codlex</Text>
-                };
+
+                        position: "absolute",
+                        left: 0,
+                        bottom: 0,
+                        backgroundColor: "#3B5998",
+                        color: "white",
+                        width: "100%",
+                        height: 50,
+                        fontSize: 10,
+                        paddingTop: 10,
+                        textAlign: "center"
+                    }}
+                >Codlex</Text>
             </View>
 
         );
     }
+
     render() {
         return (
-            <View style={{flexGrow: 1, flex : 1 }}>
+            <View style={{flexGrow: 1, flex: 1}}>
                 {this.state.currentRace == null ?
                     this.mainScreen()
-                    : <RaceComponent  userId = {this.state.userData.id} initialState = {this.state.currentRace} battleFinished = {
-                        () => {
-                            this.setState({currentRace : null, appState : IDLE_STATE});
-                        }
-                    } />
+                    : <RaceComponent userId={this.state.userData.id} initialState={this.state.currentRace}
+                                     battleFinished={
+                                         () => {
+                                             this.setState({currentRace: null, appState: IDLE_STATE});
+                                         }
+                                     }/>
                 }
             </View>
         );
@@ -173,7 +175,7 @@ class MainScreenComponent extends Component {
 
                                 if (response.status == "Running") {
                                     console.log("Starting battle.");
-                                    this.setState({currentRace : response});
+                                    this.setState({currentRace: response});
                                     clearInterval(this.interval);
                                     return;
                                 }
@@ -209,7 +211,7 @@ class MainScreenComponent extends Component {
                 >Looking for a worthy runner...</Text>
 
                 <ActivityIndicator size="large" color="white" style={{zIndex: 2, top: -120}}/>
-                <Button title="Cancel"  onPress={ () => this.cancelFind()}/>
+                <Button title="Cancel" onPress={() => this.cancelFind()}/>
 
             </View>
         );
@@ -218,7 +220,7 @@ class MainScreenComponent extends Component {
     cancelFind() {
         MainServer.fetch("/race/cancel/user/" + this.state.userData.id, {}, (response) => {
             if (response) {
-                this.setState({ appState : IDLE_STATE });
+                this.setState({appState: IDLE_STATE});
                 clearInterval(this.interval);
             }
         });

@@ -58,17 +58,6 @@ class DistanceTrackerComponent extends Component {
     render() {
         return (<MapView showsUserLocation={true}
                          followsUserLocation={true}></MapView>);
-        // return (
-        //         //   <View style = {{
-        //         //       flex : 1,
-        //         //       flexGrow : 1,
-        //         //       alignItems: 'center',
-        //         //       justifyContent: 'center'
-        //         //   }}>
-        //         //
-        //         //       <Text>{this.state.currentDistance}km</Text>
-        //         //   </View>
-        //         // );
     }
 }
 
