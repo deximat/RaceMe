@@ -2,12 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9aaa167c-1bc4-497b-8710-9231c7105c3c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/DistanceTrackerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DistanceTrackerComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MainScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MainScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Race.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Race.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/src/main/java/com/codlex/racememonolith/RaceMeMonolithApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/src/main/java/com/codlex/racememonolith/login/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/src/main/java/com/codlex/racememonolith/login/UserManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/src/main/java/com/codlex/racememonolith/race/Race.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/src/main/java/com/codlex/racememonolith/race/RaceManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/src/main/java/com/codlex/racememonolith/race/RaceState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/src/main/java/com/codlex/racememonolith/race/runner/BotRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/src/main/java/com/codlex/racememonolith/race/runner/Runner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/src/test/java/com/codlex/racememonolith/RaceMeMonolithApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/.babelrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/.idea/RaceMe3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/.watchmanconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/components/DistanceTrackerComponent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/components/Login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/components/MainScreen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/components/MainServer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/components/Race.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/components/Styles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/race.mov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/demos/mainScreen.mov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/demos/race 2.mov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../race-me-monolith/.idea/workspace.xml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -90,40 +124,69 @@
     <session id="-977646424">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.4" value="2" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="9" />
+          <entry key="js" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="9" />
+          <entry key="JavaScript" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="706" />
+          <entry key="js" value="770" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="706" />
+          <entry key="JavaScript" value="770" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="337250396">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="js" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JavaScript" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="js" value="435" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JavaScript" value="435" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/components/MainScreen.js">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="547">
-              <caret line="123" column="39" lean-forward="true" selection-start-line="123" selection-start-column="39" selection-end-line="123" selection-end-column="39" />
+            <state relative-caret-position="135">
+              <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -132,13 +195,55 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/MainServer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/MainScreen.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="102" column="35" lean-forward="true" selection-start-line="102" selection-start-column="35" selection-end-line="102" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/components/Race.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-866">
-              <caret line="135" column="5" selection-start-line="135" selection-start-column="5" selection-end-line="135" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="589">
+              <caret line="343" column="35" selection-start-line="343" selection-start-column="35" selection-end-line="343" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/Styles.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/Login.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/DistanceTrackerComponent.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="474">
+              <caret line="43" column="50" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -147,9 +252,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>coordinates</find>
-      <find>backgroundcolor</find>
-      <find>getme</find>
       <find>race</find>
       <find>getdistance</find>
       <find>speed</find>
@@ -175,8 +277,11 @@
       <find>192</find>
       <find>this.state</find>
       <find>distance</find>
-      <find>button</find>
       <find>Button</find>
+      <find>button</find>
+      <find>finished</find>
+      <find>senddistance</find>
+      <find>ondistancechange</find>
     </findStrings>
     <replaceStrings>
       <replace>runners</replace>
@@ -190,12 +295,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/components/Styles.js" />
-        <option value="$PROJECT_DIR$/App.js" />
         <option value="$PROJECT_DIR$/components/Login.js" />
+        <option value="$PROJECT_DIR$/components/MainScreen.js" />
+        <option value="$PROJECT_DIR$/App.js" />
         <option value="$PROJECT_DIR$/components/MainServer.js" />
         <option value="$PROJECT_DIR$/components/DistanceTrackerComponent.js" />
         <option value="$PROJECT_DIR$/components/Race.js" />
-        <option value="$PROJECT_DIR$/components/MainScreen.js" />
       </list>
     </option>
   </component>
@@ -217,7 +322,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1313" />
+    <option name="width" value="1878" />
     <option name="height" value="1148" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -226,26 +331,27 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="RaceMe3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RaceMe3" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="RaceMe3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RaceMe3" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="Server&#9;FILE&#9;file:///Users/dejanpe/Projects/Personal/RaceMe/monolith/frontend/components/MainServer.js" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -286,22 +392,24 @@
       <workItem from="1535884815556" duration="16181000" />
       <workItem from="1536227177283" duration="903000" />
       <workItem from="1536338539722" duration="4751000" />
+      <workItem from="1536742811968" duration="523000" />
+      <workItem from="1537982260637" duration="2487000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56054000" />
+    <option name="totallyTimeSpent" value="60762000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1313" height="1148" extended-state="0" />
+    <frame x="0" y="23" width="1878" height="1148" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32972136" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22940226" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32954547" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -332,33 +440,34 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/react-native-elements/src/index.d.ts" />
+    <entry file="file://$PROJECT_DIR$/node_modules/react-native-android-location-enabler/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="43" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+        <state relative-caret-position="135">
+          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/Login.js">
+    <entry file="file://$PROJECT_DIR$/components/MainServer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="270">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/DistanceTrackerComponent.js">
+    <entry file="file://$PROJECT_DIR$/components/MainScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="232">
+          <caret line="102" column="35" lean-forward="true" selection-start-line="102" selection-start-column="35" selection-end-line="102" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -369,30 +478,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/MainServer.js">
+    <entry file="file://$PROJECT_DIR$/components/Login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+        <state relative-caret-position="480">
+          <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/DistanceTrackerComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="43" column="50" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/components/Race.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-866">
-          <caret line="135" column="5" selection-start-line="135" selection-start-column="5" selection-end-line="135" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/MainScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="123" column="39" lean-forward="true" selection-start-line="123" selection-start-column="39" selection-end-line="123" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="589">
+          <caret line="343" column="35" selection-start-line="343" selection-start-column="35" selection-end-line="343" selection-end-column="35" />
         </state>
       </provider>
     </entry>

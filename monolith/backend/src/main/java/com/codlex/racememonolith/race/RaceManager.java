@@ -18,6 +18,17 @@ public class RaceManager {
 	public RaceManager() {
 	}
 
+	@RequestMapping(value = "/race/{raceId}/user/{userId}/quit", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+	@ResponseBody
+	public RaceState updateDistance(@PathVariable("raceId") Integer raceId, @PathVariable("userId") Integer userId) {
+		log.debug("raceId: {}, userId: {}, wants to quit: {}", raceId, userId);
+
+		final Race race = findRaceById(raceId);
+		final Runner runner = race.findRunner(userId);
+		runner.quit();
+		return race.buildState();
+	}
+
 	@RequestMapping(value = "/race/{raceId}/user/{userId}/distance/{distance}", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	public RaceState updateDistance(@PathVariable("raceId") Integer raceId, @PathVariable("userId") Integer userId,

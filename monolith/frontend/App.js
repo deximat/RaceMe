@@ -1,14 +1,8 @@
 import React, {Component} from 'react';
 import {Text, View} from 'react-native';
-import MapView from 'react-native-maps';
 import LoginComponent from './components/Login';
-
-import geolib from 'geolib'
-
-// import RaceComponent from "./components/Race"
-import MainScreenComponent from "./components/MainScreen"
-import DistanceTrackerComponent from "./components/DistanceTrackerComponent"
-import RaceComponent from "./components/Race";
+import RNAndroidLocationEnabler from 'react-native-android-location-enabler';
+import MainScreenComponent from "./components/MainScreen";
 
 class GeolocationExample extends Component {
 

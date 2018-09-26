@@ -34,6 +34,13 @@ class MultiplayerRace {
             .catch((error) => console.log("ERROR:" + error));
     }
 
+    sendQuit() {
+        this.sendMessage("/race/" + this.raceId + "/user/" + this.userId + "/quit", {},  (data) => {
+            data.runners = data.runners.sort((a, b) => b.distance - a.distance);
+            this.callback(data);
+        });
+    }
+
     sendDistance(distance) {
         this.sendMessage("/race/" + this.raceId + "/user/" + this.userId + "/distance/" + distance, {},  (data) => {
             data.runners = data.runners.sort((a, b) => b.distance - a.distance);
@@ -192,9 +199,8 @@ class RaceComponent extends Component {
                     }}
                 >{this.getMe().username}</Text>
 
-                <View style={{backgroundColor : "red", position : "absolute", alignItems : "stretch", left: 0, right: 0, top: 200, bottom: 0}}>
-                    <View style = {{ flex: 1, backgroundColor : "purple" }}></View>
-                </View>
+                <Button title="QUIT" style={{ width : 100, height: 50, marginTop: 200, zIndex: 5, right:0, position: "absolute"}} onPress={() => {this.race.sendQuit()}}></Button>
+
 
                 <View style={{flex: 1, flexDirection: 'row', position: "absolute", top: 250, bottom: 0, left : 0, right: 0}}>
                     {this.getSlowerThanMe() != null ?
@@ -297,6 +303,7 @@ class RaceComponent extends Component {
                                 }}
                             >{this.getFasterThanMe().distance.toFixed(2) + "km"}</Text>
                         </View>) : null}
+
                 </View>
 
                 <DistanceTrackerComponent onDistanceChange={(distance) => this.race.sendDistance(distance)} />
@@ -332,7 +339,10 @@ class RaceComponent extends Component {
         return (
             <ListItem
                 title={(index + 1) + "." + item.username + " " + item.distance.toFixed(2) + "km"}
-                subtitle={(item.finished ? "Finish time: " : "Still running time:") + " " + this.getStringifiedTime(item)}
+                subtitle={(
+
+                    item.dnf ? "DNF" : (
+                    item.finished ? "Finish time: " : "Still running time:") + " " + this.getStringifiedTime(item))}
             />
         )
     }
