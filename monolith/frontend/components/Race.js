@@ -131,6 +131,8 @@ class RaceComponent extends Component {
     results() {
         return (<View style = {{  borderWidth: 5, padding: 10, margin: 20,  borderColor : Styles.mainColor,  backgroundColor: "white", position : "absolute", left : 0, right: 0, top : 250, zIndex: 2}}>
             <Text style = {{ fontSize : 30, textAlign: "center"}}>Finished race!</Text>
+            <Text style = {{ fontSize : 20, textAlign: "center"}}>Rating reward: { this.getMe().reward }</Text>
+
             <List>
                 <FlatList
                     data={this.state.runners}
@@ -138,7 +140,7 @@ class RaceComponent extends Component {
                     keyExtractor={item => item.username}
                 />
             </List>
-            <Button title="Done" backgroundColor={Styles.mainColor} onPress={() => this.props.battleFinished()} style = {{ marginTop : 50}} />
+            <Button title="Done" backgroundColor={Styles.mainColor} onPress={() => this.props.battleFinished(this.getMe().reward)} style = {{ marginTop : 50}} />
         </View>);
     }
 
@@ -342,7 +344,7 @@ class RaceComponent extends Component {
                 subtitle={(
 
                     item.dnf ? "DNF" : (
-                    item.finished ? "Finish time: " : "Still running time:") + " " + this.getStringifiedTime(item))}
+                    item.finished ? "Finish time: " : "Still running time:") + " " + this.getStringifiedTime(item)) + ", reward: " + item.reward }
             />
         )
     }

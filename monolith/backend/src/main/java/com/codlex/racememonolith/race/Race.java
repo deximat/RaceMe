@@ -3,7 +3,10 @@ package com.codlex.racememonolith.race;
 import com.codlex.racememonolith.race.RaceState.RaceStatus;
 import com.codlex.racememonolith.race.runner.BotRunner;
 import com.codlex.racememonolith.race.runner.Runner;
+import com.google.common.collect.ComparisonChain;
+import com.google.common.collect.Ordering;
 import lombok.Getter;
+import org.springframework.util.comparator.Comparators;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -13,6 +16,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class Race {
 
+    public static final int RACERS_COUNT = 5;
 
     public Runner findRunner(Integer userId) {
         return this.runners.get(userId);
@@ -38,22 +42,22 @@ public class Race {
     private Map<Integer, Runner> buildRunners(List<Integer> userIds) {
         Map<Integer, Runner> runners = new HashMap<>();
         for (Integer userId : userIds) {
-            runners.put(userId, new Runner(userId));
+            runners.put(userId, new Runner(userId, this, true));
         }
 
-        BotRunner bot1 = new BotRunner(-101, "Bolt");
+        BotRunner bot1 = new BotRunner(-101, "Bolt", this);
         bot1.start();
         runners.put(bot1.getId(), bot1);
 
-        BotRunner bot2 = new BotRunner(-102, "Petar");
+        BotRunner bot2 = new BotRunner(-102, "Petar", this);
         bot2.start();
         runners.put(bot2.getId(), bot2);
 
-        BotRunner bot3 = new BotRunner(-103, "John");
+        BotRunner bot3 = new BotRunner(-103, "John", this);
         bot3.start();
         runners.put(bot3.getId(), bot3);
 
-        BotRunner bot4 = new BotRunner(-104, "Mitrovic");
+        BotRunner bot4 = new BotRunner(-104, "Mitrovic", this);
         bot4.start();
         runners.put(bot4.getId(), bot4);
 
@@ -65,4 +69,14 @@ public class Race {
         return new RaceState(this.id, new ArrayList(this.runners.values()), this.startedAt, RaceStatus.Running);
     }
 
+    public int getPosition(int id) {
+        final List<Runner> allRunners = new ArrayList<>(this.runners.values());
+        allRunners.sort((runner1, runner2) -> {
+                        return ComparisonChain.start()
+                                .compare(runner2.getDistance(), runner1.getDistance())
+                                .compare(runner1.getFinishedAt(), runner2.getFinishedAt())
+                                .result();
+            });
+        return allRunners.indexOf(findRunner(id));
+    }
 }

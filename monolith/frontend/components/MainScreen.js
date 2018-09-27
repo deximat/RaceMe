@@ -5,6 +5,7 @@ import MapView, {Polyline} from 'react-native-maps';
 import geolib from "geolib";
 import MainServer from "./MainServer";
 import RaceComponent from "./Race";
+import update from 'react-addons-update'; // ES6
 
 const IDLE_STATE = 0;
 const LOOKING_FOR_OPPONENT_STATE = 1;
@@ -137,8 +138,8 @@ class MainScreenComponent extends Component {
                     this.mainScreen()
                     : <RaceComponent userId={this.state.userData.id} initialState={this.state.currentRace}
                                      battleFinished={
-                                         () => {
-                                             this.setState({currentRace: null, appState: IDLE_STATE});
+                                         (reward) => {
+                                             this.setState({currentRace: null, appState: IDLE_STATE, userData : update(this.state.userData, {rating : { $set : Math.max(0, this.state.userData.rating + reward)} }) });
                                          }
                                      }/>
                 }

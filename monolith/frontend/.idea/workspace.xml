@@ -2,46 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9aaa167c-1bc4-497b-8710-9231c7105c3c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/src/main/java/com/codlex/racememonolith/RaceMeMonolithApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/src/main/java/com/codlex/racememonolith/login/LoginController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/src/main/java/com/codlex/racememonolith/login/UserManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/src/main/java/com/codlex/racememonolith/race/Race.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/src/main/java/com/codlex/racememonolith/race/RaceManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/src/main/java/com/codlex/racememonolith/race/RaceState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/src/main/java/com/codlex/racememonolith/race/runner/BotRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/src/main/java/com/codlex/racememonolith/race/runner/Runner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../backend/race-me-monolith/src/test/java/com/codlex/racememonolith/RaceMeMonolithApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/.babelrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/.idea/RaceMe3.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/.watchmanconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/components/DistanceTrackerComponent.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/components/Login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/components/MainScreen.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/components/MainServer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/components/Race.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/components/Styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/RaceMe3/race.mov" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/demos/mainScreen.mov" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/demos/race 2.mov" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../race-me-monolith/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/codlex/racememonolith/login/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/codlex/racememonolith/login/UserManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/codlex/racememonolith/race/Race.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/codlex/racememonolith/race/Race.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/codlex/racememonolith/race/runner/BotRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/codlex/racememonolith/race/runner/BotRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/codlex/racememonolith/race/runner/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/codlex/racememonolith/race/runner/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MainScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MainScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Race.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Race.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -154,8 +124,9 @@
     <session id="337250396">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.5" value="2" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -170,12 +141,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="435" />
+          <entry key="js" value="667" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="435" />
+          <entry key="JavaScript" value="667" />
         </counts>
       </usages-collector>
     </session>
@@ -185,8 +156,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+            <state relative-caret-position="75">
+              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -203,20 +174,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/components/MainScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="102" column="35" lean-forward="true" selection-start-line="102" selection-start-column="35" selection-end-line="102" selection-end-column="35" />
+            <state relative-caret-position="322">
+              <caret line="141" column="153" selection-start-line="141" selection-start-column="153" selection-end-line="141" selection-end-column="153" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/Race.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="343" column="35" selection-start-line="343" selection-start-column="35" selection-end-line="343" selection-end-column="35" />
+            <state relative-caret-position="502">
+              <caret line="142" column="116" selection-start-line="142" selection-start-column="116" selection-end-line="142" selection-end-column="116" />
             </state>
           </provider>
         </entry>
@@ -225,7 +199,7 @@
         <entry file="file://$PROJECT_DIR$/components/Styles.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+              <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -242,7 +216,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/DistanceTrackerComponent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
+            <state relative-caret-position="600">
               <caret line="43" column="50" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
             </state>
           </provider>
@@ -252,10 +226,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>race</find>
-      <find>getdistance</find>
-      <find>speed</find>
-      <find>this.state.players.find</find>
       <find>players</find>
       <find>mapviewcompo</find>
       <find>input</find>
@@ -282,6 +252,10 @@
       <find>finished</find>
       <find>senddistance</find>
       <find>ondistancechange</find>
+      <find>battle</find>
+      <find>results</find>
+      <find>setSTate</find>
+      <find>setState</find>
     </findStrings>
     <replaceStrings>
       <replace>runners</replace>
@@ -296,11 +270,11 @@
       <list>
         <option value="$PROJECT_DIR$/components/Styles.js" />
         <option value="$PROJECT_DIR$/components/Login.js" />
-        <option value="$PROJECT_DIR$/components/MainScreen.js" />
         <option value="$PROJECT_DIR$/App.js" />
         <option value="$PROJECT_DIR$/components/MainServer.js" />
         <option value="$PROJECT_DIR$/components/DistanceTrackerComponent.js" />
         <option value="$PROJECT_DIR$/components/Race.js" />
+        <option value="$PROJECT_DIR$/components/MainScreen.js" />
       </list>
     </option>
   </component>
@@ -331,7 +305,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -348,6 +321,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -393,12 +367,13 @@
       <workItem from="1536227177283" duration="903000" />
       <workItem from="1536338539722" duration="4751000" />
       <workItem from="1536742811968" duration="523000" />
-      <workItem from="1537982260637" duration="2487000" />
+      <workItem from="1537982260637" duration="2834000" />
+      <workItem from="1538069667144" duration="2243000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60762000" />
+    <option name="totallyTimeSpent" value="63352000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1878" height="1148" extended-state="0" />
@@ -409,7 +384,7 @@
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32954547" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32954547" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -449,8 +424,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        <state relative-caret-position="75">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -464,17 +439,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/MainScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="102" column="35" lean-forward="true" selection-start-line="102" selection-start-column="35" selection-end-line="102" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/Styles.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -487,15 +455,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/components/DistanceTrackerComponent.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
+        <state relative-caret-position="600">
           <caret line="43" column="50" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/components/Race.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="343" column="35" selection-start-line="343" selection-start-column="35" selection-end-line="343" selection-end-column="35" />
+        <state relative-caret-position="502">
+          <caret line="142" column="116" selection-start-line="142" selection-start-column="116" selection-end-line="142" selection-end-column="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/MainScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="141" column="153" selection-start-line="141" selection-start-column="153" selection-end-line="141" selection-end-column="153" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

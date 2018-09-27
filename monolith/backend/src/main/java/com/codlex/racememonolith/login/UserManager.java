@@ -28,7 +28,11 @@ public class UserManager {
 			this.id = ID_GENERATOR.incrementAndGet();
 			this.username = username;
 		}
-	}
+
+        public void addRating(int reward) {
+			this.rating = Math.max(0, this.rating + reward);
+        }
+    }
 
 	private final Map<String, User> users = new HashMap<>();
 
