@@ -36,7 +36,7 @@ class MultiplayerRace {
 
     sendQuit() {
         this.sendMessage("/race/" + this.raceId + "/user/" + this.userId + "/quit", {},  (data) => {
-            data.runners = data.runners.sort((a, b) => b.distance - a.distance);
+            data.runners = data.runners;
             this.callback(data);
         });
     }

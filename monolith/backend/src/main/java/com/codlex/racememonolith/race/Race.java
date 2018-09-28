@@ -58,7 +58,8 @@ public class Race {
         runners.put(bot3.getId(), bot3);
 
         BotRunner bot4 = new BotRunner(-104, "Mitrovic", this);
-        bot4.start();
+        // bot4.start();
+        bot4.setDNF(true);
         runners.put(bot4.getId(), bot4);
 
         return runners;
@@ -66,17 +67,22 @@ public class Race {
 
 
     public RaceState buildState() {
-        return new RaceState(this.id, new ArrayList(this.runners.values()), this.startedAt, RaceStatus.Running);
+        return new RaceState(this.id, new ArrayList(getSortedRunners()), this.startedAt, RaceStatus.Running);
+    }
+
+
+    private List<Runner> getSortedRunners() {
+        List<Runner> allRunners = new ArrayList<>(this.runners.values());
+        allRunners.sort((runner1, runner2) -> {
+            return ComparisonChain.start()
+                    .compare(runner2.getDistance(), runner1.getDistance())
+                    .compare(runner1.getFinishedAt(), runner2.getFinishedAt())
+                    .result();
+        });
+        return allRunners;
     }
 
     public int getPosition(int id) {
-        final List<Runner> allRunners = new ArrayList<>(this.runners.values());
-        allRunners.sort((runner1, runner2) -> {
-                        return ComparisonChain.start()
-                                .compare(runner2.getDistance(), runner1.getDistance())
-                                .compare(runner1.getFinishedAt(), runner2.getFinishedAt())
-                                .result();
-            });
-        return allRunners.indexOf(findRunner(id));
+        return getSortedRunners().indexOf(findRunner(id));
     }
 }

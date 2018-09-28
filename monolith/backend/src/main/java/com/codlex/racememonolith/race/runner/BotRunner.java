@@ -15,7 +15,7 @@ public class BotRunner extends Runner {
     public BotRunner(int id, String username, Race race) {
         super(id, race, false);
         this.username = username;
-        this.speed = Math.random() * 0.002;
+        this.speed = Math.random() * 1;
     }
 
     public void start() {
