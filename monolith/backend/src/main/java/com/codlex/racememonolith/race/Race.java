@@ -8,6 +8,9 @@ import com.google.common.collect.Ordering;
 import lombok.Getter;
 import org.springframework.util.comparator.Comparators;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -22,16 +25,17 @@ public class Race {
         return this.runners.get(userId);
     }
 
-
     private static final AtomicInteger ID_GENERATOR = new AtomicInteger();
 
     @Getter
+    @Id
+    @GeneratedValue
     final int id;
-
-    final Map<Integer, Runner> runners;
 
     @Getter
     private final long startedAt;
+
+    final Map<Integer, Runner> runners;
 
     public Race(final List<Integer> userIds) {
         this.id = ID_GENERATOR.incrementAndGet();

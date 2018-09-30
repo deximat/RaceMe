@@ -1,10 +1,11 @@
 package com.codlex.racememonolith.race.runner;
 
-import com.codlex.racememonolith.login.UserManager;
+import com.codlex.racememonolith.login.UserRepository;
 import com.codlex.racememonolith.race.Race;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @AllArgsConstructor
 @Data
@@ -19,6 +20,7 @@ public class Runner {
     private boolean isDNF;
 
     private int reward;
+
 
     public synchronized void addDistance(double distance) {
         if (isFinished()) {
@@ -38,7 +40,9 @@ public class Runner {
 
         if (justFinished) {
             this.reward = (Race.RACERS_COUNT - this.race.getPosition(this.id)) * 10;
-            UserManager.get().findById(this.id).addRating(this.reward);
+
+            // TODO: fix adding rating
+            // this.repository.findById(this.id).get().addRating(this.reward);
         }
     }
 
@@ -46,7 +50,8 @@ public class Runner {
         this.id = id;
         this.race = race;
         if (getUsername) {
-            this.username = UserManager.get().findById(id).getUsername();
+            // TODO: fix username;
+            this.username = "FIX"; // this.repository.findById(id).get().getUsername();
         }
     }
 
@@ -54,7 +59,8 @@ public class Runner {
         this.isDNF = true;
         this.finishedAt = System.currentTimeMillis();
         this.reward = -10;
-        UserManager.get().findById(this.id).addRating(this.reward);
+        // TODO: fix adding rating
+        // this.repository.findById(this.id).get().addRating(this.reward);
     }
 
     public boolean isFinished() {

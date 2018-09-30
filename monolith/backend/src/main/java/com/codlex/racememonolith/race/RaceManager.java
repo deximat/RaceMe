@@ -2,8 +2,10 @@ package com.codlex.racememonolith.race;
 
 import java.util.*;
 
+import com.codlex.racememonolith.login.UserService;
 import com.codlex.racememonolith.race.runner.Runner;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +16,9 @@ public class RaceManager {
 	private static final int NUMBER_OF_PARTICIPANTS = 1;
 
 	private Map<Integer, Race> races = new HashMap<>();
+
+	@Autowired
+	private UserService userService;
 
 	public RaceManager() {
 	}
@@ -26,6 +31,7 @@ public class RaceManager {
 		final Race race = findRaceById(raceId);
 		final Runner runner = race.findRunner(userId);
 		runner.quit();
+		this.userService.addRating(runner.getId(), 111);
 		return race.buildState();
 	}
 
