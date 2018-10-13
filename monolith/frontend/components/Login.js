@@ -26,14 +26,15 @@ class LoginComponent extends Component {
 
     login() {
         console.log("Sta sad: " + this.state.username);
-        MainServer.fetch("login/" + this.state.username, {}, (response) => {
+        MainServer.fetch("login-service/login/" + this.state.username, {}, (response) => {
             console.log("Logged in: " + JSON.stringify(response));
             this.props.onSuccess(response);
         })
     }
 
     render() {
-        return (<KeyboardAvoidingView behavior="padding" style = {{flex: 1, backgroundColor: Styles.mainColor, justifyContent : "flex-end", alignItems: "center", flexDirection: "column", padding: 50 }}>
+        return (<KeyboardAvoidingView behavior="padding" style = {{flex: 1, backgroundColor: Styles.mainColor,
+            justifyContent : "flex-end", alignItems: "center", flexDirection: "column", padding: 50 }}>
             <Text style = {{ height: 200,  color: "white", margin : 0, fontSize : 50, position: "absolute", top: 50,}} >Race Me 3.0</Text>
             <MapView
                 showsUserLocation={true}
@@ -68,7 +69,7 @@ class LoginComponent extends Component {
 
         </KeyboardAvoidingView>);
     }
-
 }
 
 export default LoginComponent;
+

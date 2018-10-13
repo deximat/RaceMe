@@ -26,23 +26,13 @@ class DistanceTrackerComponent extends Component {
                         longitudeDelta: 0
                     };
 
-                    let timePassed = (Date.now() - this.state.startTime) / 1000;
-
                     let distancePassed = lastPoint != null ? geolib.getDistance(lastPoint, newPoint) / 1000 : 0;
-                    // console.log("distance passed: " + distancePassed);
-
-                    console.log("last point: " + JSON.stringify(lastPoint) + " newPoint: " + JSON.stringify(newPoint));
-                    console.log("Has two distance points: " + (lastPoint != null));
-                    console.log("tracked new dot, distance: " + this.state.currentDistance + "speed:" + position.coords.speed);
-
 
                     this.setState({
                         coordinates: this.state.coordinates.concat(newPoint),
                         currentDistance: this.state.currentDistance + distancePassed
                     });
 
-                    console.log("distance change: " + distancePassed);
-                    // call callback
                     this.props.onDistanceChange(distancePassed);
                 },
                 (error) => this.setState({error: error.message}),

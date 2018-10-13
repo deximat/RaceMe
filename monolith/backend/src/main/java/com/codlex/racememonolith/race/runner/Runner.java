@@ -1,11 +1,9 @@
 package com.codlex.racememonolith.race.runner;
 
-import com.codlex.racememonolith.login.UserRepository;
 import com.codlex.racememonolith.race.Race;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 
 @AllArgsConstructor
 @Data

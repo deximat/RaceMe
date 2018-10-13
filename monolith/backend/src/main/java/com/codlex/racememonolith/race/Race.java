@@ -70,8 +70,8 @@ public class Race {
     }
 
 
-    public RaceState buildState() {
-        return new RaceState(this.id, new ArrayList(getSortedRunners()), this.startedAt, RaceStatus.Running);
+    public RaceState buildState(RaceManager.Server serverInfo) {
+        return new RaceState(this.id, new ArrayList(getSortedRunners()), this.startedAt, RaceStatus.Running, serverInfo);
     }
 
 

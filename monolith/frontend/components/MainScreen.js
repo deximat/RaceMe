@@ -169,7 +169,7 @@ class MainScreenComponent extends Component {
                     onPress={() => {
                         this.setState({appState: LOOKING_FOR_OPPONENT_STATE});
                         this.interval = setInterval(() => {
-                            MainServer.fetch("/race/find/user/" + this.state.userData.id, {}, (response) => {
+                            MainServer.fetch("/find-race-service/race/find/user/" + this.state.userData.id, {}, (response) => {
                                 if (response.status == "Waiting") {
                                     return;
                                 }
@@ -219,7 +219,7 @@ class MainScreenComponent extends Component {
     }
 
     cancelFind() {
-        MainServer.fetch("/race/cancel/user/" + this.state.userData.id, {}, (response) => {
+        MainServer.fetch("/find-race-service/race/cancel/user/" + this.state.userData.id, {}, (response) => {
             if (response) {
                 this.setState({appState: IDLE_STATE});
                 clearInterval(this.interval);

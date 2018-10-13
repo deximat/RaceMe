@@ -13,15 +13,14 @@ const MAX_DISTANCE = 5;
 
 class MultiplayerRace {
 
-    constructor(userId, raceId, address, port) {
-        this.address = address;
-        this.port = port;
-        this.raceId = raceId;
+    constructor(userId, raceState) {
+        this.address = raceState.server.address;
+        this.port = raceState.server.port;
+        this.raceId = raceState.id;
         this.userId = userId;
     }
 
     sendMessage(endpoint, data, callback) {
-        console.log("sending message to path: " + endpoint);
         fetch('http://' + this.address + ":" + this.port + "/" + endpoint, {
             method: 'POST',
             headers: {
@@ -35,14 +34,14 @@ class MultiplayerRace {
     }
 
     sendQuit() {
-        this.sendMessage("/race/" + this.raceId + "/user/" + this.userId + "/quit", {},  (data) => {
+        this.sendMessage("/race-service/race/" + this.raceId + "/user/" + this.userId + "/quit", {},  (data) => {
             data.runners = data.runners;
             this.callback(data);
         });
     }
 
     sendDistance(distance) {
-        this.sendMessage("/race/" + this.raceId + "/user/" + this.userId + "/distance/" + distance, {},  (data) => {
+        this.sendMessage("/race-service/race/" + this.raceId + "/user/" + this.userId + "/distance/" + distance, {},  (data) => {
             data.runners = data.runners.sort((a, b) => b.distance - a.distance);
             this.callback(data);
         });
@@ -51,7 +50,6 @@ class MultiplayerRace {
     subscribeToRaceUpdates(callback) {
         this.callback = callback;
     }
-
 }
 
 class RaceComponent extends Component {
@@ -61,7 +59,7 @@ class RaceComponent extends Component {
         console.log("initial state: " + JSON.stringify(this.props.initialState));
         this.state = this.props.initialState;
 
-        this.race = new MultiplayerRace(this.props.userId, this.props.initialState.id, MainServer.address, 8080);
+        this.race = new MultiplayerRace(this.props.userId, this.props.initialState);
         this.race.subscribeToRaceUpdates((state) => this.setState(state));
 
 

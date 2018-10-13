@@ -16,6 +16,9 @@ public class RaceState {
 	final List<Runner> runners;
 	final long startedAt;
 	final RaceStatus status;
+	final RaceManager.Server server;
 
-	public static final RaceState WAITING = new RaceState(-1, null, 0, RaceStatus.Waiting);
+	public static final RaceState WAITING = new RaceState(-1, null, 0, RaceStatus.Waiting, RaceManager.Server.NONE);
+
+
 }
