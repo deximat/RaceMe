@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/api-gateway/api-gateway.iml" filepath="$PROJECT_DIR$/api-gateway/api-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-service/eureka-service.iml" filepath="$PROJECT_DIR$/eureka-service/eureka-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/find-race-service/find-race-service.iml" filepath="$PROJECT_DIR$/find-race-service/find-race-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/login-service/login-service.iml" filepath="$PROJECT_DIR$/login-service/login-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/race-service/race-service.iml" filepath="$PROJECT_DIR$/race-service/race-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/raceme-common/raceme-common.iml" filepath="$PROJECT_DIR$/raceme-common/raceme-common.iml" />
+    </modules>
+  </component>
+</project>

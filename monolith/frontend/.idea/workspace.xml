@@ -334,6 +334,7 @@
       <change afterPath="$PROJECT_DIR$/../../microservices/backend4/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_1.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../microservices/backend4/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../microservices/backend4/.idea/libraries/Maven__com_google_guava_guava_16_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../microservices/backend4/.idea/libraries/Maven__com_google_guava_guava_19_0.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../microservices/backend4/.idea/libraries/Maven__com_google_inject_guice_4_1_0.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../microservices/backend4/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../microservices/backend4/.idea/libraries/Maven__com_netflix_archaius_archaius_core_0_7_6.xml" afterDir="false" />
@@ -508,26 +509,24 @@
       <change afterPath="$PROJECT_DIR$/../../microservices/backend4/.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../microservices/backend4/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../microservices/backend4/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../microservices/backend4/find-race-service/src/main/java/com/codlex/raceme/findraceservice/RaceFinder.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../microservices/backend4/login-service/src/main/java/com/codlex/raceme/loginservice/user/LoginController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../microservices/backend4/login-service/src/main/java/com/codlex/raceme/loginservice/user/User.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../microservices/backend4/login-service/src/main/java/com/codlex/raceme/loginservice/user/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../microservices/backend4/login-service/src/main/java/com/codlex/raceme/loginservice/user/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/src/main/java/com/codlex/racememonolith/racefinder/RaceFinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/codlex/racememonolith/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/codlex/racememonolith/user/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/codlex/racememonolith/login/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/codlex/racememonolith/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/codlex/racememonolith/login/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/codlex/racememonolith/user/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/codlex/racememonolith/login/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/codlex/racememonolith/user/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/codlex/racememonolith/race/Race.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/codlex/racememonolith/race/Race.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/codlex/racememonolith/race/RaceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/codlex/racememonolith/race/RaceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/codlex/racememonolith/race/RaceState.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/codlex/racememonolith/race/RaceState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/codlex/racememonolith/race/runner/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/codlex/racememonolith/race/runner/Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/DistanceTrackerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DistanceTrackerComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MainScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MainScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MainServer.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MainServer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Race.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Race.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../microservices/backend4/race-service/src/main/java/com/codlex/raceme/raceservice/Race.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../microservices/backend4/race-service/src/main/java/com/codlex/raceme/raceservice/RaceManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../microservices/backend4/race-service/src/main/java/com/codlex/raceme/raceservice/runner/BotRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../microservices/backend4/raceme-common/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../microservices/backend4/raceme-common/raceme-common.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../microservices/backend4/raceme-common/src/main/java/com/codlex/api/LoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../microservices/backend4/raceme-common/src/main/java/com/codlex/api/RaceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../microservices/backend4/raceme-common/src/main/java/com/codlex/data/RaceState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../microservices/backend4/raceme-common/src/main/java/com/codlex/data/Runner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../microservices/backend4/raceme-common/src/main/java/com/codlex/data/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../microservices/backend/LoginService/src/main/java/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../microservices/backend/demo/src/main/java/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../microservices/backend/demo/src/main/java/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/codlex/racememonolith/login/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../microservices/backend4/login-service/src/main/java/com/codlex/raceme/loginservice/user/UserService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -840,12 +839,12 @@
       <workItem from="1538069667144" duration="2574000" />
       <workItem from="1538154961078" duration="897000" />
       <workItem from="1538231947322" duration="1164000" />
-      <workItem from="1539192971804" duration="4278000" />
+      <workItem from="1539192971804" duration="4518000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70022000" />
+    <option name="totallyTimeSpent" value="70262000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1878" height="1148" extended-state="0" />

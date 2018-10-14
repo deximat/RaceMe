@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="api-gateway" />
+        <module name="eureka-service" />
+        <module name="find-race-service" />
+        <module name="login-service" />
+        <module name="race-service" />
+        <module name="raceme-common" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="api-gateway" target="1.8" />
+      <module name="eureka-service" target="1.8" />
+      <module name="find-race-service" target="1.8" />
+      <module name="login-service" target="1.8" />
+      <module name="race-service" target="1.8" />
+      <module name="raceme-common" target="1.8" />
+      <module name="test-manager" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

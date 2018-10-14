@@ -23,7 +23,7 @@ class MultiplayerRace {
     sendMessage(endpoint, data, callback) {
         fetch('http://' + this.address + ":" + this.port + "/" + endpoint, {
             method: 'POST',
-            headers: {
+            headers: { 
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
             },
