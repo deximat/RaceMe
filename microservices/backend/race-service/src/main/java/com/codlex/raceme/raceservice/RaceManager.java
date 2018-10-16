@@ -94,7 +94,7 @@ public class RaceManager {
 
         log.debug("##### START_RACE racers: {}", racingIds);
 
-        Race race = new Race(racingIds);
+        Race race = new Race(racingIds, this.loginService);
         this.races.put(race.getId(), race);
         return race.buildState(this.serverInfo);
     }

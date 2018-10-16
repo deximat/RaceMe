@@ -8,4 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public interface LoginService {
     @RequestMapping("/add-rating/user/{userId}/{amount}")
     void addRating(@PathVariable("userId") int userId, @PathVariable("amount") int amount);
+
+    @RequestMapping(value = "/username/{userId}")
+    public String getUsername(@PathVariable("userId") int userId);
 }

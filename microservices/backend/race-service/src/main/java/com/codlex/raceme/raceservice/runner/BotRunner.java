@@ -14,8 +14,7 @@ public class BotRunner extends Runner {
     private final double speed;
 
     public BotRunner(int id, String username) {
-        super(id, false);
-        this.username = username;
+        super(id, username);
         this.speed = Math.random() * 1;
     }
 

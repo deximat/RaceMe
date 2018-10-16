@@ -11,35 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7e6aef1-78bd-4e43-80f5-2e30e5d1df43" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_configuration_processor_2_0_5_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/find-race-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/find-race-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/find-race-service/src/main/java/com/codlex/raceme/findraceservice/RaceFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/find-race-service/src/main/java/com/codlex/raceme/findraceservice/RaceFinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/find-race-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/find-race-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/find-races-service/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/find-races-service/target/classes/com/codlex/raceme/FindRaceServiceApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/find-races-service/target/classes/com/codlex/raceme/findracesservice/RaceFinder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/find-races-service/target/test-classes/com/codlex/raceme/findracesservice/FindRaceServiceApplicationTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/login-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login-service/src/main/java/com/codlex/raceme/loginservice/user/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/login-service/src/main/java/com/codlex/raceme/loginservice/user/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-service/src/main/java/com/codlex/raceme/loginservice/user/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/race-service/src/main/java/com/codlex/raceme/raceservice/Race.java" beforeDir="false" afterPath="$PROJECT_DIR$/race-service/src/main/java/com/codlex/raceme/raceservice/Race.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/race-service/src/main/java/com/codlex/raceme/raceservice/RaceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/race-service/src/main/java/com/codlex/raceme/raceservice/RaceManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/race-service/src/main/java/com/codlex/raceme/raceservice/runner/BotRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/race-service/src/main/java/com/codlex/raceme/raceservice/runner/BotRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/race-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/race-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/raceme-common/src/main/java/com/codlex/raceme/api/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/raceme-common/src/main/java/com/codlex/raceme/api/LoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/raceme-common/src/main/java/com/codlex/raceme/api/RaceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/raceme-common/src/main/java/com/codlex/raceme/api/RaceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/raceme-common/src/main/java/com/codlex/raceme/data/RaceState.java" beforeDir="false" afterPath="$PROJECT_DIR$/raceme-common/src/main/java/com/codlex/raceme/data/RaceState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/raceme-common/src/main/java/com/codlex/raceme/data/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/raceme-common/src/main/java/com/codlex/raceme/data/Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/raceme-common/src/main/java/com/codlex/raceme/data/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/raceme-common/src/main/java/com/codlex/raceme/data/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/raceme-common/target/classes/com/codlex/raceme/api/LoginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/raceme-common/target/classes/com/codlex/raceme/api/LoginService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/raceme-common/target/classes/com/codlex/raceme/api/RaceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/raceme-common/target/classes/com/codlex/raceme/api/RaceService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/raceme-common/target/classes/com/codlex/raceme/data/RaceState$RaceStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/raceme-common/target/classes/com/codlex/raceme/data/RaceState$RaceStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/raceme-common/target/classes/com/codlex/raceme/data/RaceState.class" beforeDir="false" afterPath="$PROJECT_DIR$/raceme-common/target/classes/com/codlex/raceme/data/RaceState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/raceme-common/target/classes/com/codlex/raceme/data/Runner.class" beforeDir="false" afterPath="$PROJECT_DIR$/raceme-common/target/classes/com/codlex/raceme/data/Runner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/raceme-common/target/classes/com/codlex/raceme/data/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/raceme-common/target/classes/com/codlex/raceme/data/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../monolith/frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../monolith/frontend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../monolith/frontend/components/Race.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../monolith/frontend/components/Race.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/eureka-service/target/" />
     <ignored path="$PROJECT_DIR$/login-service/target/" />
@@ -117,28 +94,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="32" />
+          <entry key="java" value="42" />
           <entry key="properties" value="6" />
           <entry key="xml" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="32" />
+          <entry key="JAVA" value="42" />
           <entry key="Properties" value="6" />
           <entry key="XML" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1224" />
+          <entry key="java" value="1480" />
           <entry key="properties" value="42" />
           <entry key="xml" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1224" />
+          <entry key="JAVA" value="1480" />
           <entry key="Properties" value="42" />
           <entry key="XML" value="36" />
         </counts>
@@ -150,41 +127,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/race-service/src/main/java/com/codlex/raceme/raceservice/RaceManager.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/race-service/src/main/java/com/codlex/raceme/raceservice/runner/BotRunner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+            <state relative-caret-position="195">
+              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/race-service/src/main/java/com/codlex/raceme/raceservice/Race.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="219">
+              <caret line="44" column="64" selection-start-line="44" selection-start-column="64" selection-end-line="44" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login-service/src/main/java/com/codlex/raceme/loginservice/user/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/login-service/src/main/java/com/codlex/raceme/loginservice/user/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="256">
+              <caret line="25" column="61" lean-forward="true" selection-start-line="25" selection-start-column="61" selection-end-line="25" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/race-service/src/main/resources/application.properties">
+        <entry file="file://$PROJECT_DIR$/race-service/src/main/java/com/codlex/raceme/raceservice/RaceManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/raceme-common/src/main/java/com/codlex/raceme/api/RaceService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="500">
+              <caret line="96" column="26" selection-start-line="96" selection-start-column="26" selection-end-line="96" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -192,11 +175,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/raceme-common/src/main/java/com/codlex/raceme/api/LoginService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="37" selection-start-line="8" selection-end-line="9" />
+            <state relative-caret-position="180">
+              <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/raceme-common/src/main/java/com/codlex/raceme/data/Runner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="31" column="33" lean-forward="true" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/Override.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login-service/src/main/java/com/codlex/raceme/loginservice/user/UserRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.0.10.RELEASE/spring-data-commons-2.0.10.RELEASE-sources.jar!/org/springframework/data/repository/CrudRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="77" column="16" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -256,7 +275,6 @@
         <option value="$PROJECT_DIR$/race-service/src/main/java/Race.java" />
         <option value="$PROJECT_DIR$/race-service/src/main/java/com/codlex/raceme/raceservice/runner/Runner.java" />
         <option value="$PROJECT_DIR$/raceme-common/src/main/java/com/codlex/data/Runner.java" />
-        <option value="$PROJECT_DIR$/race-service/src/main/java/com/codlex/raceme/raceservice/Race.java" />
         <option value="$PROJECT_DIR$/raceme-common/src/main/java/com/codlex/api/LoginService.java" />
         <option value="$PROJECT_DIR$/find-race-service/src/main/java/com/codlex/raceme/findraceservice/RaceService.java" />
         <option value="$PROJECT_DIR$/login-service/src/main/java/com/codlex/raceme/loginservice/RaceManager.java" />
@@ -281,12 +299,13 @@
         <option value="$PROJECT_DIR$/find-race-service/pom.xml" />
         <option value="$PROJECT_DIR$/find-race-service/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/login-service/pom.xml" />
-        <option value="$PROJECT_DIR$/raceme-common/src/main/java/com/codlex/raceme/data/Runner.java" />
-        <option value="$PROJECT_DIR$/race-service/src/main/java/com/codlex/raceme/raceservice/runner/BotRunner.java" />
-        <option value="$PROJECT_DIR$/raceme-common/src/main/java/com/codlex/raceme/api/LoginService.java" />
-        <option value="$PROJECT_DIR$/race-service/src/main/java/com/codlex/raceme/raceservice/RaceManager.java" />
         <option value="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/login-service/src/main/java/com/codlex/raceme/loginservice/user/UserService.java" />
+        <option value="$PROJECT_DIR$/raceme-common/src/main/java/com/codlex/raceme/data/Runner.java" />
+        <option value="$PROJECT_DIR$/race-service/src/main/java/com/codlex/raceme/raceservice/runner/BotRunner.java" />
+        <option value="$PROJECT_DIR$/race-service/src/main/java/com/codlex/raceme/raceservice/RaceManager.java" />
+        <option value="$PROJECT_DIR$/race-service/src/main/java/com/codlex/raceme/raceservice/Race.java" />
+        <option value="$PROJECT_DIR$/raceme-common/src/main/java/com/codlex/raceme/api/LoginService.java" />
         <option value="$PROJECT_DIR$/login-service/src/main/java/com/codlex/raceme/loginservice/user/LoginController.java" />
       </list>
     </option>
@@ -472,7 +491,7 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="SearchEverywhereHistoryKey" value="UserSEr&#9;PSI&#9;JAVA://com.codlex.raceme.loginservice.user.UserService&#10;RaceManage&#9;FILE&#9;file:///Users/dejanpe/Projects/Personal/RaceMe/microservices/backend/race-service/src/main/java/com/codlex/raceme/raceservice/RaceManager.java&#10;FindRace&#9;PSI&#9;JAVA://com.codlex.raceme.findraceservice.FindRaceServiceApplication&#10;FindRac&#9;RUN_CONFIGURATION&#9;FindRaceServiceApplication&#10;RaceServiceA&#9;PSI&#9;JAVA://com.codlex.raceme.raceservice.RaceServiceApplication&#10;RaceSer&#9;RUN_CONFIGURATION&#9;RaceServiceApplication&#10;LoginSer&#9;FILE&#9;file:///Users/dejanpe/Projects/Personal/RaceMe/microservices/backend4/login-service/src/main/java/com/codlex/raceme/loginservice/LoginServiceApplication.java" />
+    <property name="SearchEverywhereHistoryKey" value="Runner&#9;FILE&#9;file:///Users/dejanpe/Projects/Personal/RaceMe/microservices/backend/raceme-common/src/main/java/com/codlex/raceme/data/Runner.java&#10;UserSEr&#9;PSI&#9;JAVA://com.codlex.raceme.loginservice.user.UserService&#10;RaceManage&#9;FILE&#9;file:///Users/dejanpe/Projects/Personal/RaceMe/microservices/backend/race-service/src/main/java/com/codlex/raceme/raceservice/RaceManager.java&#10;FindRace&#9;PSI&#9;JAVA://com.codlex.raceme.findraceservice.FindRaceServiceApplication&#10;FindRac&#9;RUN_CONFIGURATION&#9;FindRaceServiceApplication&#10;RaceServiceA&#9;PSI&#9;JAVA://com.codlex.raceme.raceservice.RaceServiceApplication&#10;RaceSer&#9;RUN_CONFIGURATION&#9;RaceServiceApplication&#10;LoginSer&#9;FILE&#9;file:///Users/dejanpe/Projects/Personal/RaceMe/microservices/backend4/login-service/src/main/java/com/codlex/raceme/loginservice/LoginServiceApplication.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
@@ -653,7 +672,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.LoginServiceApplication">
+  <component name="RunManager" selected="Spring Boot.FindRaceServiceApplication">
     <configuration name="AllServices" type="CompoundRunConfigurationType" factoryName="Compound Run Configuration">
       <toRun type="SpringBootApplicationConfigurationType" name="EurekaServiceApplication" />
       <toRun type="SpringBootApplicationConfigurationType" name="LoginServiceApplication" />
@@ -726,12 +745,12 @@
       <workItem from="1539551994343" duration="937000" />
       <workItem from="1539552941396" duration="666000" />
       <workItem from="1539699854834" duration="733000" />
-      <workItem from="1539700598793" duration="7055000" />
+      <workItem from="1539700598793" duration="8337000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23463000" />
+    <option name="totallyTimeSpent" value="24745000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="23" width="1900" height="1148" extended-state="0" />
@@ -743,7 +762,7 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" sideWeight="0.50141245" side_tool="true" weight="0.17168999" />
       <window_info id="Web" order="5" sideWeight="0.50141245" side_tool="true" weight="0.17168999" />
-      <window_info active="true" anchor="bottom" id="REST Client" visible="true" weight="0.32954547" />
+      <window_info anchor="bottom" id="REST Client" weight="0.32954547" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32954547" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32954547" />
@@ -758,7 +777,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32954547" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run Dashboard" order="14" weight="0.32954547" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="14" visible="true" weight="0.32954547" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -778,13 +797,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/login-service/src/main/java/com/codlex/raceme/loginservice/user/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/eureka-service/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
@@ -881,13 +893,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/race-service/src/main/java/com/codlex/raceme/raceservice/Race.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13">
-          <caret line="48" column="40" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login-service/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
@@ -916,13 +921,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/race-service/src/main/java/com/codlex/raceme/raceservice/runner/BotRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/eureka-service/src/main/java/com/codlex/raceme/EurekaServiceApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -934,13 +932,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/raceme-common/src/main/java/com/codlex/raceme/data/Runner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -961,27 +952,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/raceme-common/src/main/java/com/codlex/raceme/api/LoginService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="37" selection-start-line="8" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login-service/src/main/java/com/codlex/raceme/loginservice/user/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-service/src/main/java/com/codlex/raceme/loginservice/user/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
@@ -992,10 +966,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.0.10.RELEASE/spring-data-commons-2.0.10.RELEASE-sources.jar!/org/springframework/data/repository/CrudRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="77" column="16" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login-service/src/main/java/com/codlex/raceme/loginservice/user/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/Override.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/raceme-common/src/main/java/com/codlex/raceme/data/Runner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="31" column="33" lean-forward="true" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login-service/src/main/java/com/codlex/raceme/loginservice/user/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/race-service/src/main/java/com/codlex/raceme/raceservice/RaceManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+        <state relative-caret-position="500">
+          <caret line="96" column="26" selection-start-line="96" selection-start-column="26" selection-end-line="96" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/raceme-common/src/main/java/com/codlex/raceme/api/LoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/race-service/src/main/java/com/codlex/raceme/raceservice/Race.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="44" column="64" selection-start-line="44" selection-start-column="64" selection-end-line="44" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/race-service/src/main/java/com/codlex/raceme/raceservice/runner/BotRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login-service/src/main/java/com/codlex/raceme/loginservice/user/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="25" column="61" lean-forward="true" selection-start-line="25" selection-start-column="61" selection-end-line="25" selection-end-column="61" />
         </state>
       </provider>
     </entry>

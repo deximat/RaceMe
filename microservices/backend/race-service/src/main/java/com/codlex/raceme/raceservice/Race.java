@@ -1,6 +1,7 @@
 package com.codlex.raceme.raceservice;
 
 
+import com.codlex.raceme.api.LoginService;
 import com.codlex.raceme.data.RaceState;
 import com.codlex.raceme.data.Runner;
 import com.codlex.raceme.data.Server;
@@ -32,16 +33,16 @@ public class Race {
 
     final Map<Integer, Runner> runners;
 
-    public Race(final List<Integer> userIds) {
+    public Race(final List<Integer> userIds, LoginService loginService) {
         this.id = ID_GENERATOR.incrementAndGet();
-        this.runners = buildRunners(userIds);
+        this.runners = buildRunners(userIds, loginService);
         this.startedAt = System.currentTimeMillis();
     }
 
-    private Map<Integer, Runner> buildRunners(List<Integer> userIds) {
+    private Map<Integer, Runner> buildRunners(List<Integer> userIds, LoginService loginService) {
         Map<Integer, Runner> runners = new HashMap<>();
         for (Integer userId : userIds) {
-            runners.put(userId, new Runner(userId, true));
+            runners.put(userId, new Runner(userId, loginService.getUsername(userId)));
         }
 
         BotRunner bot1 = new BotRunner(-101, "Bolt");

@@ -27,12 +27,9 @@ public class Runner {
         this.distance = Math.min(targetDistance, this.distance + distance);
     }
 
-    public Runner(int id,  boolean getUsername) {
+    public Runner(int id,  String username) {
         this.id = id;
-        if (getUsername) {
-            // TODO: fix username;
-            this.username = "FIX"; // this.repository.findById(id).get().getUsername();
-        }
+        this.username = username;
     }
 
     public void quit(LoginService loginService) {

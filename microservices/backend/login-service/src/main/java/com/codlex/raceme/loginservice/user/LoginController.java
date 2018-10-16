@@ -34,6 +34,12 @@ public class LoginController implements com.codlex.raceme.api.LoginService {
     }
 
     @Override
+    public String getUsername(@PathVariable("userId") int userId) {
+        User user = this.repository.findById(userId).get();
+        return user.getUsername();
+    }
+
+    @Override
     public void addRating(@PathVariable("userId") int userId, @PathVariable("amount") int amount) {
         User user = this.repository.findById(userId).get();
         user.addRating(amount);
