@@ -21,7 +21,7 @@ public class BotRunner extends Runner {
 
     public void start() {
         SERVICE.scheduleAtFixedRate(() -> {
-            addDistance(Math.random() * this.speed);
+            addDistance(5, Math.random() * this.speed);
         }, 0, 1, TimeUnit.SECONDS);
     }
 }

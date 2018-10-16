@@ -23,7 +23,7 @@ class MultiplayerRace {
     sendMessage(endpoint, data, callback) {
         fetch('http://' + this.address + ":" + this.port + "/" + endpoint, {
             method: 'POST',
-            headers: { 
+            headers: {
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
             },
@@ -34,15 +34,15 @@ class MultiplayerRace {
     }
 
     sendQuit() {
-        this.sendMessage("/race-service/race/" + this.raceId + "/user/" + this.userId + "/quit", {},  (data) => {
-            data.runners = data.runners;
+        console.log("Quitting.");
+        this.sendMessage("/race/" + this.raceId + "/user/" + this.userId + "/quit", {},  (data) => {
+            console.log("Response came.");
             this.callback(data);
         });
     }
 
     sendDistance(distance) {
-        this.sendMessage("/race-service/race/" + this.raceId + "/user/" + this.userId + "/distance/" + distance, {},  (data) => {
-            data.runners = data.runners.sort((a, b) => b.distance - a.distance);
+        this.sendMessage("/race/" + this.raceId + "/user/" + this.userId + "/distance/" + distance, {},  (data) => {
             this.callback(data);
         });
     }
@@ -199,7 +199,10 @@ class RaceComponent extends Component {
                     }}
                 >{this.getMe().username}</Text>
 
-                <Button title="QUIT" style={{ width : 100, height: 50, marginTop: 200, zIndex: 5, right:0, position: "absolute"}} onPress={() => {this.race.sendQuit()}}></Button>
+                <Button title="QUIT" style={{ width : 100, height: 50, marginTop: 200, zIndex: 5, right:0, position: "absolute"}} onPress={() => {
+
+                    console.log("pressed.");
+                    this.race.sendQuit()}}></Button>
 
 
                 <View style={{flex: 1, flexDirection: 'row', position: "absolute", top: 250, bottom: 0, left : 0, right: 0}}>

@@ -14,10 +14,13 @@ class DistanceTrackerComponent extends Component {
     }
 
     componentDidMount() {
+
+        // console.log()
         this.myInterval = setInterval(() => {
+            console.log("getting cooridnates")
             navigator.geolocation.getCurrentPosition(
                 (position) => {
-                    console.log(JSON.stringify(position.coords));
+                    console.log("coordinates: " + JSON.stringify(position.coords));
                     let lastPoint = this.state.coordinates[this.state.coordinates.length - 1];
                     let newPoint = {
                         latitude: position.coords.latitude,
@@ -38,7 +41,7 @@ class DistanceTrackerComponent extends Component {
                 (error) => this.setState({error: error.message}),
                 {enableHighAccuracy: true, timeout: 1000, maximumAge: 0},
             );
-        }, 1000);
+        }, 10000);
     }
 
     componentWillUnmount() {

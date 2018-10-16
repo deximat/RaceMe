@@ -1,5 +1,7 @@
 package com.codlex.raceme.data;
 
+import com.codlex.raceme.api.LoginService;
+import com.codlex.raceme.api.RaceService;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
@@ -18,26 +20,11 @@ public class Runner {
     private int reward;
 
 
-    public synchronized void addDistance(double distance) {
+    public synchronized void addDistance(double targetDistance, double distance) {
         if (isFinished()) {
             return;
         }
-
-        double targetDistance = 5;
         this.distance = Math.min(targetDistance, this.distance + distance);
-
-        boolean newIsFinished = this.distance >= targetDistance;
-        boolean justFinished = !this.isFinished && newIsFinished;
-        this.isFinished = newIsFinished;
-
-        if (!this.isFinished) {
-            this.finishedAt = System.currentTimeMillis();
-        }
-
-        if (justFinished) {
-//            this.reward = (Race.RACERS_COUNT - this.race.getPosition(this.id)) * 10;
-
-        }
     }
 
     public Runner(int id,  boolean getUsername) {
@@ -48,12 +35,12 @@ public class Runner {
         }
     }
 
-    public void quit() {
+    public void quit(LoginService loginService) {
         this.isDNF = true;
         this.finishedAt = System.currentTimeMillis();
         this.reward = -10;
-        // TODO: fix adding rating
-        // this.repository.findById(this.id).get().addRating(this.reward);
+
+        loginService.addRating(getId(), getReward());
     }
 
     public boolean isFinished() {

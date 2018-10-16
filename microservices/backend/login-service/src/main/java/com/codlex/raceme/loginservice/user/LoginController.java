@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @Slf4j
-public class LoginController {
+public class LoginController implements com.codlex.raceme.api.LoginService {
 
 
     @Autowired
@@ -33,4 +33,13 @@ public class LoginController {
         return user;
     }
 
+    @Override
+    public void addRating(@PathVariable("userId") int userId, @PathVariable("amount") int amount) {
+        User user = this.repository.findById(userId).get();
+        user.addRating(amount);
+        this.repository.save(user);
+        log.debug("{} got {} rating reward.", user, amount);
+
+
+    }
 }

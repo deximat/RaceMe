@@ -7,6 +7,7 @@ import java.util.List;
 @Data
 public class RaceState {
 
+
 	public enum RaceStatus {
 		Running, Waiting, Done;
 	}
@@ -18,6 +19,5 @@ public class RaceState {
 	final Server server;
 
 	public static final RaceState WAITING = new RaceState(-1, null, 0, RaceStatus.Waiting, Server.NONE);
-
-
+	public static final RaceState NONE = new RaceState(-2, null, 0, RaceStatus.Waiting, Server.NONE);;
 }
