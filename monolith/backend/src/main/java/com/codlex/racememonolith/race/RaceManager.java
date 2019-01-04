@@ -39,7 +39,7 @@ public class RaceManager {
 
     public RaceManager(final Environment environment) {
 //        try {
-            this.serverInfo = new Server("localhost", Integer.parseInt(environment.getProperty("server.port")));
+            this.serverInfo = new Server("192.168.1.91", 8080);
             log.debug("Server info: " + this.serverInfo);
 //        } catch (SocketException e) {
 //            e.printStackTrace();

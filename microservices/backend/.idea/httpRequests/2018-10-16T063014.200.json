@@ -1,0 +1,56 @@
+{
+  "id": 5,
+  "runners": [
+    {
+      "id": -101,
+      "username": "Bolt",
+      "distance": 5.0,
+      "finishedAt": 1539707385008,
+      "reward": 0,
+      "finished": false,
+      "dnf": false
+    },
+    {
+      "id": -102,
+      "username": "Petar",
+      "distance": 5.0,
+      "finishedAt": 1539707385008,
+      "reward": 0,
+      "finished": false,
+      "dnf": false
+    },
+    {
+      "id": -103,
+      "username": "John",
+      "distance": 3.4782730742958616,
+      "finishedAt": 1539707385008,
+      "reward": 0,
+      "finished": false,
+      "dnf": false
+    },
+    {
+      "id": 2,
+      "username": "FIX",
+      "distance": 3.0,
+      "finishedAt": 1539707414290,
+      "reward": 0,
+      "finished": false,
+      "dnf": false
+    },
+    {
+      "id": -104,
+      "username": "Mitrovic",
+      "distance": 0.0,
+      "finishedAt": 1539707385008,
+      "reward": 0,
+      "finished": true,
+      "dnf": true
+    }
+  ],
+  "startedAt": 1539707385008,
+  "status": "Running",
+  "server": {
+    "address": "localhost",
+    "port": 2003
+  }
+}

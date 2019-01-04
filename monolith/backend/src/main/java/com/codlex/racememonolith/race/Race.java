@@ -46,22 +46,24 @@ public class Race {
     private Map<Integer, Runner> buildRunners(List<Integer> userIds) {
         Map<Integer, Runner> runners = new HashMap<>();
         for (Integer userId : userIds) {
-            runners.put(userId, new Runner(userId, this, true));
+            BotRunner bot = new BotRunner(userId, "Dejan Pekter", this, 0.028);
+            bot.start();
+            runners.put(userId, bot);
         }
 
-        BotRunner bot1 = new BotRunner(-101, "Bolt", this);
+        BotRunner bot1 = new BotRunner(-101, "Bolt", this, 0.05);
         bot1.start();
         runners.put(bot1.getId(), bot1);
 
-        BotRunner bot2 = new BotRunner(-102, "Petar", this);
+        BotRunner bot2 = new BotRunner(-102, "Petar", this, 0.03);
         bot2.start();
         runners.put(bot2.getId(), bot2);
 
-        BotRunner bot3 = new BotRunner(-103, "John", this);
+        BotRunner bot3 = new BotRunner(-103, "John", this, 0.02);
         bot3.start();
         runners.put(bot3.getId(), bot3);
 
-        BotRunner bot4 = new BotRunner(-104, "Mitrovic", this);
+        BotRunner bot4 = new BotRunner(-104, "Mitrovic", this, 0.01);
         // bot4.start();
         bot4.setDNF(true);
         runners.put(bot4.getId(), bot4);

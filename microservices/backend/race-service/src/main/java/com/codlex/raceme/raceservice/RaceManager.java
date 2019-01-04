@@ -21,18 +21,15 @@ public class RaceManager {
 
     private Server serverInfo;
 
+    @Autowired
     private LoginService loginService;
+
+
 
     @Autowired
     public RaceManager(final Environment environment, final LoginService loginService) {
-//        try {
-            this.serverInfo = new Server("localhost", Integer.parseInt(environment.getProperty("server.port")));
-            log.debug("Server info: " + this.serverInfo);
+            this.serverInfo = new Server("192.168.1.91", Integer.parseInt(environment.getProperty("server.port")));
             this.loginService = loginService;
-            log.debug("Login service: " + loginService);
-//        } catch (SocketException e) {
-//            e.printStackTrace();
-//        }
     }
 
     @RequestMapping(value = "/race/{raceId}/user/{userId}/quit", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)

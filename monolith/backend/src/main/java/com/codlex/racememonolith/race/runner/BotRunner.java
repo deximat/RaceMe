@@ -12,15 +12,15 @@ public class BotRunner extends Runner {
     private static final ScheduledExecutorService SERVICE = Executors.newSingleThreadScheduledExecutor();
     private final double speed;
 
-    public BotRunner(int id, String username, Race race) {
+    public BotRunner(int id, String username, Race race, double speed) {
         super(id, race, false);
         this.username = username;
-        this.speed = Math.random() * 1;
+        this.speed = speed;
     }
 
     public void start() {
         SERVICE.scheduleAtFixedRate(() -> {
             addDistance(Math.random() * this.speed);
-        }, 0, 1, TimeUnit.SECONDS);
+        }, 0, 200, TimeUnit.MILLISECONDS);
     }
 }

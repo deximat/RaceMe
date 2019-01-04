@@ -1,0 +1,7 @@
+{
+  "timestamp": "2018-10-16T14:50:48.772+0000",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "status 404 reading RaceService#startRace(List); content:\n{\"timestamp\":\"2018-10-16T14:50:48.769+0000\",\"status\":404,\"error\":\"Not Found\",\"message\":\"No message available\",\"path\":\"/find/race\"}",
+  "path": "/race/find/user/1"
+}

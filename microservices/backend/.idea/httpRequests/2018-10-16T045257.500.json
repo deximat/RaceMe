@@ -1,0 +1,7 @@
+{
+  "timestamp": "2018-10-16T14:52:57.332+0000",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "status 500 reading RaceService#findRaceByUserId(int); content:\n{\"timestamp\":\"2018-10-16T14:52:57.310+0000\",\"status\":500,\"error\":\"Internal Server Error\",\"message\":\"No message available\",\"path\":\"/race/find/user/1\"}",
+  "path": "/race/find/user/1"
+}
