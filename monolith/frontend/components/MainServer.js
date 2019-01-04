@@ -1,7 +1,7 @@
 
 
 let MainServer = {
-    address : "localhost",
+    address : "192.168.1.91",
     port : 8080,
     fetch : function (path, data, callback) {
         console.log("Request path: " + path);

@@ -18,30 +18,32 @@ class DistanceTrackerComponent extends Component {
         // console.log()
         this.myInterval = setInterval(() => {
             console.log("getting cooridnates")
-            navigator.geolocation.getCurrentPosition(
-                (position) => {
-                    console.log("coordinates: " + JSON.stringify(position.coords));
-                    let lastPoint = this.state.coordinates[this.state.coordinates.length - 1];
-                    let newPoint = {
-                        latitude: position.coords.latitude,
-                        longitude: position.coords.longitude,
-                        latitudeDelta: 0,
-                        longitudeDelta: 0
-                    };
+            // navigator.geolocation.getCurrentPosition(
+            //     (position) => {
+            //         console.log("coordinates: " + JSON.stringify(position.coords));
+            //         let lastPoint = this.state.coordinates[this.state.coordinates.length - 1];
+            //         let newPoint = {
+            //             latitude: position.coords.latitude,
+            //             longitude: position.coords.longitude,
+            //             latitudeDelta: 0,
+            //             longitudeDelta: 0
+            //         };
+            //
+            //         let distancePassed = lastPoint != null ? geolib.getDistance(lastPoint, newPoint) / 1000 : 0;
+            //
+            //         this.setState({
+            //             coordinates: this.state.coordinates.concat(newPoint),
+            //             currentDistance: this.state.currentDistance + distancePassed
+            //         });
 
-                    let distancePassed = lastPoint != null ? geolib.getDistance(lastPoint, newPoint) / 1000 : 0;
+                    // this.props.onDistanceChange(distancePassed);
+                // },
+                // (error) => this.setState({error: error.message}),
+                // {enableHighAccuracy: true, timeout: 1000, maximumAge: 0},
+            // );
 
-                    this.setState({
-                        coordinates: this.state.coordinates.concat(newPoint),
-                        currentDistance: this.state.currentDistance + distancePassed
-                    });
-
-                    this.props.onDistanceChange(distancePassed);
-                },
-                (error) => this.setState({error: error.message}),
-                {enableHighAccuracy: true, timeout: 1000, maximumAge: 0},
-            );
-        }, 10000);
+            this.props.onDistanceChange(0.00);
+        }, 200);
     }
 
     componentWillUnmount() {

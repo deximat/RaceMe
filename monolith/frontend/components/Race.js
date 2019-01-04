@@ -35,14 +35,14 @@ class MultiplayerRace {
 
     sendQuit() {
         console.log("Quitting.");
-        this.sendMessage("/race/" + this.raceId + "/user/" + this.userId + "/quit", {},  (data) => {
+        this.sendMessage("/race-service/race/" + this.raceId + "/user/" + this.userId + "/quit", {},  (data) => {
             console.log("Response came.");
             this.callback(data);
         });
     }
 
     sendDistance(distance) {
-        this.sendMessage("/race/" + this.raceId + "/user/" + this.userId + "/distance/" + distance, {},  (data) => {
+        this.sendMessage("/race-service/race/" + this.raceId + "/user/" + this.userId + "/distance/" + distance, {},  (data) => {
             this.callback(data);
         });
     }
