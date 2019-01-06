@@ -13,9 +13,9 @@ public class BotRunner extends Runner {
     private final double speed;
 
     public BotRunner(int id, String username, Race race, double speed) {
-        super(id, race, false);
-        this.username = username;
+        super(id, username, null);
         this.speed = speed;
+        attachToRace(race);
     }
 
     public void start() {

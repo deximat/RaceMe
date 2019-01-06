@@ -3,7 +3,10 @@ package com.codlex.racememonolith.race;
 import java.net.NetworkInterface;
 import java.net.SocketException;
 import java.util.*;
+import java.util.stream.Collectors;
 
+import com.codlex.racememonolith.user.User;
+import com.codlex.racememonolith.user.UserRepository;
 import com.codlex.racememonolith.user.UserService;
 import com.codlex.racememonolith.race.runner.Runner;
 import lombok.AllArgsConstructor;
@@ -37,9 +40,12 @@ public class RaceManager {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private UserRepository userRepository;
+
     public RaceManager(final Environment environment) {
 //        try {
-            this.serverInfo = new Server("192.168.1.91", 8080);
+            this.serverInfo = new Server("139.162.179.179", 5566);
             log.debug("Server info: " + this.serverInfo);
 //        } catch (SocketException e) {
 //            e.printStackTrace();
@@ -88,7 +94,10 @@ public class RaceManager {
     }
 
     public RaceState startRace(List<Integer> racingIds) {
-        Race race = new Race(racingIds);
+        Race race = new Race(racingIds.stream().map(id -> {
+            final User user = userRepository.findById(id).get();
+            return new Runner(id, user.getUsername(), userRepository);
+        }).collect(Collectors.toList()));
         this.races.put(race.getId(), race);
         return race.buildState(this.serverInfo);
     }

@@ -7,7 +7,8 @@ import {
     TouchableOpacity,
     Image,
     TextInput,
-    Text
+    Text,
+    Alert
 } from 'react-native';
 import Styles from './Styles'
 import { Button, Icon } from 'react-native-elements';
@@ -25,6 +26,11 @@ class LoginComponent extends Component {
     }
 
     login() {
+        if (this.state.username == null) {
+            Alert.alert("Enter username!");
+            return;
+        }
+
         console.log("Sta sad: " + this.state.username);
         MainServer.fetch("login-service/login/" + this.state.username, {}, (response) => {
             console.log("Logged in: " + JSON.stringify(response));
@@ -49,7 +55,7 @@ class LoginComponent extends Component {
                     console.log("setting username: " + username);
                 }}
                 style = {{ width: 10000, maxWidth: "100%", height: 30, backgroundColor : "white", marginBottom: 30, padding : 2}}
-                defaultValue="Deximat"
+                defaultValue="Enter username"
             />
 
             <Button

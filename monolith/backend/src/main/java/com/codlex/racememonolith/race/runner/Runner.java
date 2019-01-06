@@ -1,6 +1,8 @@
 package com.codlex.racememonolith.race.runner;
 
 import com.codlex.racememonolith.race.Race;
+import com.codlex.racememonolith.user.User;
+import com.codlex.racememonolith.user.UserRepository;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
@@ -9,7 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 @Data
 @Slf4j
 public class Runner {
-    private final Race race;
+    private Race race;
     protected int id;
     protected String username;
     private volatile double distance;
@@ -44,21 +46,26 @@ public class Runner {
         }
     }
 
-    public Runner(int id, Race race, boolean getUsername) {
-        this.id = id;
+
+    public void attachToRace(Race race) {
         this.race = race;
-        if (getUsername) {
-            // TODO: fix username;
-            this.username = "FIX"; // this.repository.findById(id).get().getUsername();
-        }
+    }
+
+    public Runner(int id, String username, UserRepository repository) {
+        this.id = id;
+        this.username = username;
+//        this.userRepository = repository;
     }
 
     public void quit() {
         this.isDNF = true;
         this.finishedAt = System.currentTimeMillis();
         this.reward = -10;
-        // TODO: fix adding rating
-        // this.repository.findById(this.id).get().addRating(this.reward);
+        if (!(this instanceof BotRunner)) {
+//            TODO: fix adding rating
+//            User user = this.userRepository.findById(this.id).get();
+//            user.addRating(this.reward);
+        }
     }
 
     public boolean isFinished() {

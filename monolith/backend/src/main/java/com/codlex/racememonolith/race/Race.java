@@ -37,18 +37,18 @@ public class Race {
 
     final Map<Integer, Runner> runners;
 
-    public Race(final List<Integer> userIds) {
+    public Race(final List<Runner> userIds) {
         this.id = ID_GENERATOR.incrementAndGet();
         this.runners = buildRunners(userIds);
         this.startedAt = System.currentTimeMillis();
     }
 
-    private Map<Integer, Runner> buildRunners(List<Integer> userIds) {
+    private Map<Integer, Runner> buildRunners(List<Runner> humanRunners) {
         Map<Integer, Runner> runners = new HashMap<>();
-        for (Integer userId : userIds) {
-            BotRunner bot = new BotRunner(userId, "Dejan Pekter", this, 0.028);
-            bot.start();
-            runners.put(userId, bot);
+
+        for (Runner runner : humanRunners) {
+            runner.attachToRace(this);
+            runners.put(runner.getId(), runner);
         }
 
         BotRunner bot1 = new BotRunner(-101, "Bolt", this, 0.05);
