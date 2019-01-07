@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {Text, View} from 'react-native';
-import LoginComponent from './components/Login';
+import Taxi from './components/Taxi';
 import RNAndroidLocationEnabler from 'react-native-android-location-enabler';
-import MainScreenComponent from "./components/MainScreen";
+import { KeepAwake } from 'expo';
 
 class GeolocationExample extends Component {
 
@@ -13,10 +13,9 @@ class GeolocationExample extends Component {
 
     render() {
         return (
-            <View style = {{ flexGrow : 1, flex : 1}}>
-                {this.state.userData == null ?
-                <LoginComponent onSuccess={(data) => this.setState({userData : data})} />
-                : <MainScreenComponent userData={this.state.userData}/>}
+            <View style={{flexGrow: 1, flex: 1}}>
+                <Taxi/>
+                <KeepAwake />
             </View>
         )
     };

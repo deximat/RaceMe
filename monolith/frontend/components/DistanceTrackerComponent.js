@@ -14,38 +14,36 @@ class DistanceTrackerComponent extends Component {
     }
 
     componentDidMount() {
+        console.log("mounted")
 
-        // console.log()
-        this.myInterval = setInterval(() => {
-            console.log("getting cooridnates")
-            navigator.geolocation.getCurrentPosition(
-                (position) => {
-                    console.log("coordinates: " + JSON.stringify(position.coords));
-                    let lastPoint = this.state.coordinates[this.state.coordinates.length - 1];
-                    let newPoint = {
-                        latitude: position.coords.latitude,
-                        longitude: position.coords.longitude,
-                        latitudeDelta: 0,
-                        longitudeDelta: 0
-                    };
+        this.watchId = navigator.geolocation.watchPosition(
+            (position) => {
+                console.log("coordinates: " + JSON.stringify(position.coords));
+                let lastPoint = this.state.coordinates[this.state.coordinates.length - 1];
+                let newPoint = {
+                    latitude: position.coords.latitude,
+                    longitude: position.coords.longitude,
+                    latitudeDelta: 0,
+                    longitudeDelta: 0
+                };
 
-                    let distancePassed = lastPoint != null ? geolib.getDistance(lastPoint, newPoint) / 1000 : 0;
+                let distancePassed = lastPoint != null ? geolib.getDistance(lastPoint, newPoint) / 1000 : 0;
 
-                    this.setState({
-                        coordinates: this.state.coordinates.concat(newPoint),
-                        currentDistance: this.state.currentDistance + distancePassed
-                    });
+                this.setState({
+                    coordinates: this.state.coordinates.concat(newPoint),
+                    currentDistance: this.state.currentDistance + distancePassed
+                });
 
-                    this.props.onDistanceChange(distancePassed);
-                },
-                (error) => this.setState({error: error.message}),
-                {enableHighAccuracy: true, timeout: 1000, maximumAge: 0},
-            );
-        }, 1000);
+                this.props.onDistanceChange(distancePassed);
+            },
+            (error) => this.setState({ error: error.message }),
+            { enableHighAccuracy: true, timeout: 1000, maximumAge: 0, distanceFilter: 10},
+        );
     }
 
     componentWillUnmount() {
-        clearInterval(this.myInterval);
+        console.log("unmounted")
+        navigator.geolocation.clearWatch(this.watchId);
     }
 
     render() {

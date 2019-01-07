@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "RaceMe Running",
-    "slug": "RaceMe",
+    "name": "Taximetar",
+    "slug": "Taximetar",
     "privacy": "public",
     "sdkVersion": "31.0.0",
     "platforms": [
@@ -24,11 +24,11 @@
     ],
     "ios": {
       "supportsTablet": true,
-                        "bundleIdentifier": "com.codlex.RaceMe" // "com.chrisdascoli.getweather"
+                        "bundleIdentifier": "com.codlex.Taximetar" // "com.chrisdascoli.getweather"
 
     },
      "android": {
-                        "package": "com.codlex.RaceMe"
+                        "package": "com.codlex.Taximetar"
                 }
   }
 }

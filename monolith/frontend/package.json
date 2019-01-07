@@ -17,6 +17,8 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
     "react-native-android-location-enabler": "^1.0.8",
     "react-native-elements": "^0.19.1",
+    "react-native-keep-awake": "^4.0.0",
+    "react-native-keep-screen-on": "^1.2.0",
     "react-native-maps": "^0.22.1"
   },
   "devDependencies": {
