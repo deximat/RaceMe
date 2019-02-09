@@ -41,6 +41,7 @@ class DistanceTrackerComponent extends Component {
                 (error) => this.setState({error: error.message}),
                 {enableHighAccuracy: true, timeout: 1000, maximumAge: 0},
             );
+            this.props.onDistanceChange(0);
         }, 1000);
     }
 
